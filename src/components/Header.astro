@@ -1,0 +1,51 @@
+---
+const { sectionNames } = Astro.props;
+const path = Astro.url.pathname.split("/");
+const location = path.length ? path.at(-1) : "index";
+---
+
+<script>
+    const sections = document.querySelectorAll(
+        "section"
+    ) as NodeListOf<HTMLElement>;
+    const links = document.querySelectorAll(
+        "a[href='#']"
+    ) as NodeListOf<HTMLElement>;
+    links.forEach(function (link, index) {
+        link.onclick = function () {
+            console.log("click", sections[index])
+            sections[index].scrollIntoView({ behavior: "smooth" });
+        };
+    });
+    window.onscroll = function () {
+        const scrollTop = document.documentElement.scrollTop;
+        let active = Infinity;
+        links.forEach(function (link, index) {
+            if (index > active || sections[index].scrollTop < scrollTop) {
+                link.classList.remove("text-red");
+            } else {
+                active = index;
+                link.classList.add("text-red");
+            }
+        });
+    };
+</script>
+<header class="fixed top-4 left-4 w-80 grid grid-cols-2">
+    <p class="col-start-2 text-xl text-red">Raphael Reichl</p>
+    <h1 class="col-start-2 text-red underline">{location}</h1>
+    <nav class="mr-4 text-beige text-right">
+        <a href="/works">works</a>
+        <a class="mt-1" href="/collaborations">collaborations</a>
+        <a class="mt-1" href="/books">books / publications</a>
+        <a class="mt-1" href="/biography">biography</a>
+    </nav>
+    <nav class="mt-2 pt-2 pl-4 border-l">
+        {
+            sectionNames.map((name: string) => (
+                <a class="mt-1" href="#">
+                    {name}
+                </a>
+            ))
+        }
+    </nav>
+</header>

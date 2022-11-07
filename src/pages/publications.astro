@@ -362,7 +362,7 @@ import Bilingual from "../components/Bilingual.astro";
                     <br />
                     Raphael Reichl
                 </p>
-                <p class="mt-s indent-4">
+                <p class="mt-s">
                     Catalogue for the renowned artist Esther Stocker, covering
                     more than 20 years of artistic work.
                 </p>
@@ -398,7 +398,7 @@ import Bilingual from "../components/Bilingual.astro";
                     <br />
                     Raphael Reichl
                 </p>
-                <p class="mt-s indent-4">
+                <p class="mt-s">
                     Katalog für die renommierte Künstlerin Esther Stocker mit
                     einem Umfang von über 20 Jahre künstlerischen Schaffens.
                 </p>
@@ -501,19 +501,133 @@ import Bilingual from "../components/Bilingual.astro";
             }
         </div>
     </section>
+    <section class="mt-l">
+        <Bilingual>
+            <Fragment slot="en">
+                <h2 class="text-l text-red font-bold">3rd Generation</h2>
+                <p class="mt-s text-red italic">
+                    Prototype
+                    <br />
+                    Book, 420 pages, 8 pcs.
+                    <br />
+                    hardcover, silkscreen, manufacture, 17,9 &times; 24,2 cm
+                    <br />
+                    2013/14
+                </p>
+                <p class="mt-s text-l text-red">
+                    Authors
+                    <br />
+                    Iuna Viera and Mafalda Rakoš
+                </p>
+                <p class="mt-s text-l text-red">
+                    Editors
+                    <br />
+                    Iuna Viera, Mafalda Rakoš, Raphael Reichl
+                </p>
+                <p class="mt-s text-l text-red">
+                    Production
+                    <br />
+                    Höhere Graphische BlVa
+                </p>
+                <p class="mt-s text-l text-red">
+                    Graphic design and book concept
+                    <br />
+                    Raphael Reichl
+                </p>
+                <p class="mt-s indent-4">
+                    3rd Generation is a social documentary photo book that tells
+                    stories about the realities of life of Israeli and
+                    Palestinian youth through a personal and individual
+                    approach.
+                </p>
+                <p class="indent-4">
+                    The book, written by Iuna Viera and Mafalda Rakos, is a
+                    collection of several individual portraits that express
+                    their opinions and feelings about the Middle East conflict.
+                    The authors, who are also photographers, created stories
+                    with pictures and interviews based on their individual
+                    experiences with the protagonists. It is a personal approach
+                    to create a more intimate insight into the realities of life
+                    and an alternative to conventional reporting on the Middle
+                    East conflict.
+                </p>
+                <p class="mt-s text-l text-red border-b border-beige">
+                    Fotos by Digitale Fotowerkstatt, University of Applied Arts
+                    Vienna
+                </p>
+            </Fragment>
+            <Fragment slot="de">
+            <h2 class="text-l text-red font-bold">3rd Generation</h2>
+            <p class="mt-s text-red italic">
+                Dummy Prototyp
+                <br />
+                Buch, 420 Seiten, 8 Stk.
+                <br />
+                Hardcover, Siebdruck, Manufaktur, 17,9 &times; 24,2 cm
+                <br />
+                2013/14
+            </p>
+            <p class="mt-s text-l text-red">
+                Autorinnen
+                <br />
+                Iuna Viera and Mafalda Rakoš
+            </p>
+            <p class="mt-s text-l text-red">
+                Herausgeber
+                <br />
+                Iuna Viera, Mafalda Rakoš, Raphael Reichl
+            </p>
+            <p class="mt-s text-l text-red">
+                Produktion
+                <br />
+                Höhere Graphische BlVa
+            </p>
+            <p class="mt-s text-l text-red">
+                Grafik Design und Buchkonzept
+                <br />
+                Raphael Reichl
+            </p>
+            <p class="mt-s indent-4">
+                3rd Generation ist ein sozialdokumentarisches Fotobuchprojekt,
+                welches durch eine persönliche und individuelle Herangehensweise
+                Lebensrealitäten von israelischen und palästinensischen
+                Jugendlichen erzählt.
+            </p>
+            <p class="indent-4">
+                Das Buch, geschrieben von Iuna Viera und Mafalda Rakos, ist eine
+                Sammlung aus mehreren individuellen Porträts, die ihre Meinungen
+                und ihre Gefühlswelt zum Nah-Ost-Konflikt äußern. Die Autorinnen
+                und zugleich Fotografinnen erarbeiteten Geschichten mit Bilder
+                und Interviews anhand ihre individuellen Erlebnisse mit den
+                Protagonist:Innen. Es ist eine persönliche Annäherung, um eine
+                intimeren Einblick in Lebensrealitäten und eine Alternative zur
+                herkömmlichen Berichterstattung über den Nah-Ost-Konflikt zu
+                schaffen.
+            </p>
+            <p class="mt-s text-l text-red border-b border-beige">
+                Fotos: Digitale Fotowerkstatt, Universität für angewandte Kunst,
+                Wien
+            </p>
+            </Fragment>
+        </Bilingual>
+        <div class="mt-s flex flex-col gap-4">
+            {
+                Array.from({ length: 9 }, (_, i) => (
+                    <img
+                        src={`images/3rdG_Repro_${(i + 1)
+                            .toString()
+                            .padStart(2, "0")}.jpg`}
+                    />
+                ))
+            }
+        </div>
+    </section>
 </Layout>
 <!--
 
 ––––––––––––––––––––––––––––––––––––
 
 en
-
-3rd Generation
-
-Prototype Dummy
-Book, 420 pages, 8 pcs.
-hardcover, silkscreen, manufacture, 17,9 x 24,2 cm
-2013/14
 
 Authors
 Iuna Viera and Mafalda Rakoš
