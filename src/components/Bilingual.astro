@@ -1,0 +1,33 @@
+<script>
+    const btns = ["en", "de"].map((cc) =>
+        document.querySelector(`#btn-lang-${cc}`) as HTMLButtonElement
+    );
+    const content = ["en", "de"].map((cc) =>
+        document.querySelectorAll(`[data-lang="${cc}"]`)
+    );
+    [0,1].forEach(function(i){
+        btns[i].onclick=function(){
+            btns[1-i].removeAttribute("disabled");
+            btns[1-i].classList.add("underline");
+            btns[i].setAttribute("disabled", "");
+            btns[i].classList.remove("underline");
+            content[1-i].forEach(function(div){
+                div.classList.add("opacity-0");
+            })
+            content[i].forEach(function(div){
+                div.classList.remove("opacity-0");
+            })
+        }
+    })
+</script>
+<div class="grid">
+    <div class="row-start-1 col-start-1 transition-opacity" data-lang="en">
+        <slot name="en" />
+    </div>
+    <div
+        class="row-start-1 col-start-1 opacity-0 transition-opacity"
+        data-lang="de"
+    >
+        <slot name="de" />
+    </div>
+</div>
