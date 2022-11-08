@@ -4,7 +4,7 @@ const path = Astro.url.pathname.split("/");
 const location = path.length ? path.at(-1) : "index";
 ---
 
-<script>
+<!-- <script>
     const sections = document.querySelectorAll(
         "section"
     ) as NodeListOf<HTMLElement>;
@@ -29,7 +29,7 @@ const location = path.length ? path.at(-1) : "index";
             }
         });
     };
-</script>
+</script> -->
 <header class="fixed top-4 left-4 w-80 grid grid-cols-2">
     <p class="col-start-2 text-xl text-red">Raphael Reichl</p>
     <h1 class="col-start-2 text-red underline">{location}</h1>
