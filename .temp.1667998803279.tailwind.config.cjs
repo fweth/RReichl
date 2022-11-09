@@ -30,7 +30,7 @@ module.exports = {
         },
         minHeight: {
             ...baseSpacing
-        },
+        }
         spacing: { 0: "0", ...baseSpacing },
     },
     plugins: [],

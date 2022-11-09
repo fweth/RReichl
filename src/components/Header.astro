@@ -1,10 +1,10 @@
 ---
 const { sectionNames } = Astro.props;
-const path = Astro.url.pathname.split("/");
-const location = path.length ? path.at(-1) : "index";
+const path = Astro.url.pathname.slice(1);
+const location = path.length ? path : "index";
 ---
 
-<!-- <script>
+<script>
     const sections = document.querySelectorAll(
         "section"
     ) as NodeListOf<HTMLElement>;
@@ -12,34 +12,35 @@ const location = path.length ? path.at(-1) : "index";
         "a[href='#']"
     ) as NodeListOf<HTMLElement>;
     links.forEach(function (link, index) {
-        link.onclick = function () {
-            console.log("click", sections[index])
+        link.onclick = function (e) {
+            e.preventDefault();
             sections[index].scrollIntoView({ behavior: "smooth" });
         };
     });
-    window.onscroll = function () {
+    function scrollHandler() {
         const scrollTop = document.documentElement.scrollTop;
         let active = Infinity;
         links.forEach(function (link, index) {
-            if (index > active || sections[index].scrollTop < scrollTop) {
+            if (index > active || sections[index].offsetTop < scrollTop) {
                 link.classList.remove("text-red");
             } else {
                 active = index;
                 link.classList.add("text-red");
             }
         });
-    };
-</script> -->
+    }
+    (window.onscroll = scrollHandler)();
+</script>
 <header class="fixed top-4 left-4 w-80 grid grid-cols-2">
-    <p class="col-start-2 text-xl text-red">Raphael Reichl</p>
-    <h1 class="col-start-2 text-red underline">{location}</h1>
+    <a class="col-start-2 text-xl text-red" href="/">Raphael Reichl</a>
+    <h1 class="col-start-2 text-l text-red font-ocr-t underline">{location}</h1>
     <nav class="mr-4 text-beige text-right">
         <a href="/works">works</a>
         <a class="mt-1" href="/collaborations">collaborations</a>
-        <a class="mt-1" href="/books">books / publications</a>
+        <a class="mt-1" href="/publications">publications</a>
         <a class="mt-1" href="/biography">biography</a>
     </nav>
-    <nav class="mt-2 pt-2 pl-4 border-l">
+    <nav class="mt-2 min-h-32 pt-2 pb-4 pl-4 border-l">
         {
             sectionNames.map((name: string) => (
                 <a class="mt-1" href="#">
@@ -48,4 +49,9 @@ const location = path.length ? path.at(-1) : "index";
             ))
         }
     </nav>
+    <svg class="block w-full h-48 ml-8 -mt-4">
+        <g stroke="#66614e">
+            <use href="outline.svg#main"></use>
+        </g>
+    </svg>
 </header>

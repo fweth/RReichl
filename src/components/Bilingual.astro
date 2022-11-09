@@ -8,9 +8,9 @@
     [0,1].forEach(function(i){
         btns[i].onclick=function(){
             btns[1-i].removeAttribute("disabled");
-            btns[1-i].classList.add("underline");
+            btns[1-i].classList.remove("underline");
             btns[i].setAttribute("disabled", "");
-            btns[i].classList.remove("underline");
+            btns[i].classList.add("underline");
             content[1-i].forEach(function(div){
                 div.classList.add("opacity-0");
             })

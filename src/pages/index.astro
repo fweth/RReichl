@@ -1,7 +1,19 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import FiftyFifty from "../components/FiftyFifty.astro";
 ---
 
-<Layout title="Welcome to Astro." sectionNames={[]}>
-    <h2>Welcome to Raphael Reichl.</h2>
-	</Layout>
+<Layout
+	title="Raphael Reichl"
+	description="Personal website of artist Raphael Reichl, based in Vienna / Mexico City."
+	sectionNames={[]}
+>
+	<FiftyFifty imgSrc="expo/Cascarones_Reichl_Doku_13-web.jpg" imgWidth="58%" year={2022} dir="rtl">
+		Andar pisando en cascarones arenosos /<br />
+		Auf sandigen Eierschalen laufen
+	</FiftyFifty>
+	<FiftyFifty imgSrc="from-pdf-001.jpg" imgWidth="45%" year={2022} dir="ltr">
+		Ahuehuete.<br />
+		Thee ancient water tree
+	</FiftyFifty>
+</Layout>

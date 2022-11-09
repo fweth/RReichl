@@ -17,9 +17,9 @@ const { title, description, sectionNames } = Astro.props;
         <Header sectionNames={sectionNames}/>
         <main class="w-1/2 mt-64 ml-128 mb-64">
             <div class="sticky top-0 -mb-4 -mr-12 font-ocr-t text-l text-right text-red">
-                <button id="btn-lang-en" disabled>en</button>
+                <button id="btn-lang-en" class="underline" disabled>en</button>
                 &nbsp;/&nbsp;
-                <button id="btn-lang-de" class="underline">de</button>
+                <button id="btn-lang-de">de</button>
             </div>
             <slot />
         </main>

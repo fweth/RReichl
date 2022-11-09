@@ -1,0 +1,51 @@
+---
+const { imgSrc, imgAlt, imgWidth, year, dir } = Astro.props;
+---
+
+<article class={dir}>
+	<time class="w-8 text-red font-ocr-t">
+		{year}
+	</time>
+	<p>
+		<slot />
+	</p>
+	<img src={`images/${imgSrc}`} alt={imgAlt}/>
+</article>
+<style define:vars={{ imgWidth }}>
+	article {
+		display: flex;
+		align-items: flex-end;
+		margin-top: 80px;
+	}
+	article.rtl {
+		flex-direction: row-reverse;
+		margin-right: -64px;
+	}
+	article.ltr {
+		margin-left: -64px;
+	}
+    time {
+        width: 32px;
+		margin-bottom: -4px;
+    }
+	.rtl time {
+		text-align: right;
+	}
+	p {
+		flex: 1;
+		margin-bottom: 0;
+		padding-bottom: 8px;
+		border-bottom: solid 1px black;
+	}
+	.ltr p {
+		margin-right: 22px;
+		padding-left: 32px;
+	}	
+	.rtl p {
+		margin-left: 22px;
+	}
+    img {
+        width: var(--imgWidth);
+		/* background: red; */
+    }
+</style>
