@@ -8,19 +8,19 @@ import Vimeo from "../components/Vimeo.astro";
     title="Raphael Reichl—Publications"
     description="Publications by artist and film maker Raphael Reichl."
     sectionNames={[
-        "Andar pisando en cascarones arenosos",
-        "Ahuehuete. The ancient water tree",
-        "I can't see the forest for the trees anymore",
-        "P.A.H. (Schwedenhilfe)",
-        "The Erased Brain",
-        "revolvere",
-        "Red Green Birth",
-        "t t t touch me",
-        "12 24",
-        "¡Vení Ve!"
+        ["andar", "Andar pisando en cascarones arenosos"],
+        ["ahuehuete", "Ahuehuete. The ancient water tree"],
+        ["icantsee", "I can't see the forest for the trees anymore"],
+        ["pah", "P.A.H. (Schwedenhilfe)"],
+        ["theerased", "The Erased Brain"],
+        ["revolvere", "revolvere"],
+        ["redgreenbirth", "Red Green Birth"],
+        ["ttttouchme", "t t t touch me"],
+        ["a1224", "12 24"],
+        ["venive", "¡Vení Ve!"],
     ]}
 >
-    <section>
+    <section id="andar">
         <Bilingual>
             <Fragment slot="en">
                 <h2 class="text-l text-red font-bold">
@@ -102,8 +102,18 @@ import Vimeo from "../components/Vimeo.astro";
                 </p>
             </Fragment>
         </Bilingual>
+        <div class="mt-4 grid grid-cols-2 gap-4">
+            <img src="images/expo/Cascarones_Reichl_Doku_13-web.jpg" />
+            <img src="images/expo/Cascarones_Reichl_Doku_21-web.jpg" />
+            <img
+                class="col-span-2"
+                src="images/expo/Cascarones_Reichl_Doku_23-web.jpg"
+            />
+            <img src="images/expo/Cascarones_Reichl_Doku_33-web.jpg" />
+            <img src="images/expo/Cascarones_Reichl_Doku_36-web.jpg" />
+        </div>
     </section>
-    <section class="mt-8">
+    <section class="mt-16" id="ahuehuete">
         <Bilingual>
             <Fragment slot="en">
                 <h2 class="text-l text-red font-bold">
@@ -151,8 +161,14 @@ import Vimeo from "../components/Vimeo.astro";
                 </p>
             </Fragment>
         </Bilingual>
+        <div class="mt-4 grid grid-cols-2 gap-4">
+            <img src="images/expo/Auhuehuete_FotoWien22_Doku_01.jpg" />
+            <img src="images/expo/Auhuehuete_FotoWien22_Doku_05.jpg" />
+            <img src="images/expo/Auhuehuete_FotoWien22_Doku_06.jpg" />
+            <img src="images/expo/Auhuehuete_FotoWien22_Doku_36.jpg" />
+        </div>
     </section>
-    <section class="mt-8">
+    <section class="mt-16" id="icantsee">
         <Bilingual>
             <Fragment slot="en">
                 <h2 class="text-l text-red font-bold">
@@ -245,8 +261,16 @@ import Vimeo from "../components/Vimeo.astro";
                 </p>
             </Fragment>
         </Bilingual>
+        <div class="mt-4 grid grid-cols-2 gap-4">
+            <img src="images/expo/WaldvorlauterBaume_01-web.jpg" />
+            <img src="images/expo/WaldvorlauterBaume_02-web.jpg" />
+            <img src="images/expo/WaldvorlauterBaume_03-web.jpg" />
+            <img src="images/expo/WaldvorlauterBaume_04-web.jpg" />
+            <img src="images/expo/WaldvorlauterBaume_05-web.jpg" />
+            <img src="images/expo/WaldvorlauterBaume_06-web.jpg" />
+        </div>
     </section>
-    <section class="mt-8">
+    <section class="mt-16">
         <Bilingual>
             <Fragment slot="en">
                 <h2 class="text-l text-red font-bold">
@@ -270,7 +294,7 @@ import Vimeo from "../components/Vimeo.astro";
                     questions reality, documentation and transmission.
                 </p>
                 <p class="w-2/3">(written by Clara Hofmann)</p>
-                <p class="mt-4 text-l text-red">
+                <p class="mt-6 text-l text-red border-b border-beige">
                     Exhibition view: IM VORBEI, curated by Clara Hofmann
                     <br />
                     Within the project of Per Albin, initiated by Doris Krüger and
@@ -317,9 +341,13 @@ import Vimeo from "../components/Vimeo.astro";
                 </p>
             </Fragment>
         </Bilingual>
+        <div class="mt-4 grid grid-cols-2 gap-4">
+            <img src="images/expo/P.A.H._ImVorbei_Doku01-web.jpg" />
+            <img src="images/expo/P.A.H._ImVorbei_Doku02-web.jpg" />
+        </div>
         <Vimeo id="430772881" />
     </section>
-    <section class="mt-8">
+    <section class="mt-16">
         <Bilingual>
             <Fragment slot="en">
                 <h2 class="text-l text-red font-bold">The Erased Brain</h2>
@@ -394,9 +422,14 @@ import Vimeo from "../components/Vimeo.astro";
                 </p>
             </Fragment>
         </Bilingual>
+        <div class="mt-4 grid grid-cols-2 gap-4">
+            <img class="col-span-2" src="images/expo/Erasedbrain_01-web.jpg" />
+            <img src="images/expo/Erasedbrain_02-web.jpg" />
+            <img src="images/expo/Erasedbrain_03-web.jpg" />
+        </div>
         <Vimeo id="429307206" />
     </section>
-    <section class="mt-8">
+    <section class="mt-16">
         <Bilingual>
             <Fragment slot="en">
                 <h2 class="text-l text-red font-bold">revolvere</h2>
@@ -491,9 +524,10 @@ import Vimeo from "../components/Vimeo.astro";
                 </p>
             </Fragment>
         </Bilingual>
+        <img src="images/expo/Erasedbrain_02-web.jpg" />
         <Vimeo id="325199987" />
     </section>
-    <section class="mt-8">
+    <section class="mt-16">
         <Bilingual>
             <Fragment slot="en">
                 <h2 class="text-l text-red font-bold">Red Green Birth</h2>
@@ -583,10 +617,10 @@ import Vimeo from "../components/Vimeo.astro";
             </Fragment>
         </Bilingual>
     </section>
-    <section class="mt-8">
+    <section class="mt-16">
         <Bilingual>
             <Fragment slot="en">
-                <h2 class="text-l text-r font-bold">t t t touch me</h2>
+                <h2 class="text-l text-red font-bold">t t t touch me</h2>
                 <p class="mt-4 text-red italic">
                     Super 8 (blow-up 16 mm), colour, silent, 3 min
                     <br />
@@ -645,22 +679,26 @@ import Vimeo from "../components/Vimeo.astro";
         <Vimeo id="232663113" />
         <Bilingual>
             <Fragment slot="en">
-                <p class="mt-4 text-l text-r border-b border-beige">
+                <p class="mt-4 text-l text-red border-b border-beige">
                     Exhibition view: Rituals IV&mdash;Body
                     <br />
                     01.09.&mdash;03.10.2020, Fotogalerie Vienna
                 </p>
             </Fragment>
             <Fragment slot="de">
-                <p class="mt-4 text-l text-r border-b border-beige">
+                <p class="mt-4 text-l text-red border-b border-beige">
                     Ausstellungsansicht: Rituale IV &ndash; Körper
                     <br />
                     01.09. &ndash; 03.10.2020, Fotogalerie Wien
                 </p>
             </Fragment>
         </Bilingual>
+        <div class="mt-4 grid grid-cols-2 gap-4">
+            <img src="images/expo/ttttouchme_Fotogalerie_01-web.jpg" />
+            <img src="images/expo/ttttouchme_Fotogalerie_01-web.jpg" />
+        </div>
     </section>
-    <section class="mt-8">
+    <section class="mt-16">
         <Bilingual>
             <Fragment slot="en">
                 <h2 class="text-l text-red font-bold">12 24</h2>
@@ -707,7 +745,7 @@ import Vimeo from "../components/Vimeo.astro";
         </Bilingual>
         <Vimeo id="245454004" />
     </section>
-    <section class="mt-8">
+    <section class="mt-16">
         <Bilingual>
             <Fragment slot="en">
                 <h2 class="text-l text-red font-bold">¡Vení Ve!</h2>
