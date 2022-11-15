@@ -4,20 +4,25 @@ import Header from "../components/Header.astro";
 const {
     title = "Raphael Reichl",
     description = "Artist and filmmaker Raphael Reichl, based in Vienna / Mexico City.",
+    lang = true,
     sectionNames,
 } = Astro.props;
 ---
 
 <LayoutBare title={title} description={description}>
     <Header sectionNames={sectionNames} />
-    <main class="w-1/2 mt-64 ml-128 mb-64">
-        <div
-            class="sticky top-0 -mb-4 -mr-12 font-ocr-t text-l text-right text-red"
-        >
-            <button id="btn-lang-en" class="underline" disabled>en</button>
-            &nbsp;/&nbsp;
-            <button id="btn-lang-de">de</button>
-        </div>
+    <main class="mt-64 mb-64 w-1/2 ml-128">
+        {
+            lang && (
+                <div class="sticky top-4 -mr-12 -mb-4 text-right font-ocr-t text-l text-red">
+                    <button id="btn-lang-en" class="underline" disabled>
+                        en
+                    </button>
+                    &nbsp;/&nbsp;
+                    <button id="btn-lang-de">de</button>
+                </div>
+            )
+        }
         <slot />
     </main>
 </LayoutBare>

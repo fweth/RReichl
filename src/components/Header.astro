@@ -20,15 +20,21 @@ const location = path.length ? path : "index";
     function scrollHandler() {
         console.log("scroll");
         const scrollTop = document.documentElement.scrollTop;
-        let active = Infinity;
+        let active = links.length - 1;
         links.forEach(function (link, index) {
-            if (index > active || sections[index].offsetTop < scrollTop) {
+            if (
+                index > active ||
+                (index < active && sections[index].offsetTop < scrollTop)
+            ) {
                 link.classList.remove("text-red");
             } else {
                 active = index;
                 link.classList.add("text-red");
             }
         });
+        // if(active === Infinity) {
+        //     links.at(-1).classList.add("text-red")
+        // }
     }
     (window.onscroll = scrollHandler)();
 </script>

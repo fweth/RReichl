@@ -31,23 +31,15 @@ module.exports = {
             xxl: "24px",
         },
         spacing: { 0: "0", ...basePixels },
-    },
-    extend: {
-        colors: {
-            beige: "#66614e",
-            black: "#000",
-            red: "#b75450",
+        extend: {
+            colors: {
+                beige: "#66614e",
+                black: "#000",
+                red: "#b75450",
+            },
+            minHeight: basePixels,
+            width: baseFractions,
         },
-        margin: {
-            s: "25px",
-            m: "55px",
-            l: "80px",
-            xl: "105px",
-        },
-        minHeight: {
-            ...basePixels,
-        },
-        width: baseFractions,
     },
     plugins: [],
 };

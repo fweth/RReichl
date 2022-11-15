@@ -5,59 +5,61 @@ import Layout from "../layouts/Layout.astro";
 <Layout
     title="Raphael Reichl"
     description="Personal website of artist Raphael Reichl, based in Vienna / Mexico City."
+    lang={false}
     sectionNames={[]}
 >
-    <a class="flex items-end" href="works#andar">
+    <a class="flex items-end -mr-16" href="works#andar">
         <img
             class="w-5/8"
             src="images/expo/Cascarones_Reichl_Doku_13-web.jpg"
         />
-        <p class="flex-1 pb-2 mx-4 border-b border-beige">
+        <p class="flex-1 pb-2 ml-4 border-b border-beige">
             Andar pisando en cascarones arenosos /
             <br />
             Auf sandigen Eierschalen laufen
         </p>
-        <div class="-mb-1 text-l text-red font-ocr-t">2022</div>
+        <time class="-mb-1 w-12 text-right text-l text-red font-ocr-t">2022</time>
     </a>
-    <a class="flex flex-row-reverse items-end mt-16" href="works#ahuehuete">
-        <img
-            class="w-1/2"
-            src="images/stills/Ahuehuete_Still01-web_low.jpg"
-        />
-        <p class="flex-1 pb-2 mx-4 border-b border-beige">
-            Ahuehuete.
-            <br />
-            The ancient water tree
+    <a
+        class="flex flex-row-reverse items-end mt-16 -ml-16"
+        href="works#ahuehuete"
+    >
+        <img class="w-1/2" src="images/stills/Ahuehuete_Still01-web_low.jpg" />
+        <p class="flex-1 pb-2 pl-4 mr-4 border-b border-beige">
+            Ahuehuete.  The ancient water tree
         </p>
-        <div class="-mb-1 text-l text-red font-ocr-t">2022</div>
+        <time class="-mb-1 w-12 text-l text-red font-ocr-t">2022</time>
     </a>
-    <a class="flex items-end mt-16" href="works#icantsee">
+    <a class="flex items-end mt-16 -mr-16" href="works#icantsee">
         <img class="w-3/8" src="images/expo/WaldvorlauterBaume_04-web.jpg" />
         <p class="flex-1 pb-2 mx-4 border-b border-beige">
             I can't see the forest for the trees anymore
             <br />
             marked and unframed (Serie 1&mdash;3)
         </p>
-        <div class="-mb-1 text-l text-red font-ocr-t">2021</div>
+        <time class="-mb-1 text-l text-red font-ocr-t">2021</time>
     </a>
-    <a class="flex flex-row-reverse items-end mt-16" href="works#pah">
+    <a class="flex flex-row-reverse items-end mt-16 -ml-16" href="works#pah">
         <img class="w-3/8" src="images/expo/P.A.H._ImVorbei_Doku02-web.jpg" />
         <p class="flex-1 pb-2 mx-4 border-b border-beige">
             P.A.H. (Schwedenhilfe)
         </p>
         <div class="-mb-1 text-l text-red font-ocr-t">2019</div>
     </a>
-    <a class="flex items-end mt-16" href="works#theerased">
+    <a class="flex items-end mt-16 -mr-16" href="works#theerased">
         <img class="w-3/8" src="images/expo/Erasedbrain_02-web.jpg" />
         <p class="flex-1 pb-2 mx-4 border-b border-beige">The erased brain</p>
         <div class="-mb-1 text-l text-red font-ocr-t">2019</div>
     </a>
-    <a class="flex flex-row-reverse items-end mt-16" href="works#revolvere">
+    <a
+        class="flex flex-row-reverse items-end mt-16 -ml-16"
+        href="works#revolvere"
+    >
         <img class="w-3/8" src="images/expo/revolvere_doku_01-web.jpg" />
         <p class="flex-1 pb-2 mx-4 border-b border-beige">revolvere</p>
         <div class="-mb-1 text-l text-red font-ocr-t">2018</div>
     </a>
-    <a class="flex items-end mt-16" href="work#redgreenbirth">
+    <a class="flex items-end mt-16 -mr-16" href="work#redgreenbirth">
         <img
             class="w-3/8"
             src="images/stills/RotGrünGeburt_Filmstill1-web.jpg"
@@ -65,7 +67,10 @@ import Layout from "../layouts/Layout.astro";
         <p class="flex-1 pb-2 mx-4 border-b border-beige">Rot Grün Geburt</p>
         <div class="-mb-1 text-l text-red font-ocr-t">2018</div>
     </a>
-    <a class="flex flex-row-reverse items-end mt-16" href="dondevivoyo#dondevivoyo">
+    <a
+        class="flex flex-row-reverse items-end mt-16 -ml-16"
+        href="dondevivoyo#dondevivoyo"
+    >
         <img class="w-1/2" src="images/books/DVY_Repro_01.jpg" />
         <p class="flex-1 pb-2 mx-4 border-b border-beige">
             See, Hear & Remain Silent
@@ -74,7 +79,7 @@ import Layout from "../layouts/Layout.astro";
         </p>
         <div class="-mb-1 text-l text-red font-ocr-t">2017/18</div>
     </a>
-    <a class="flex items-end mt-16" href="works#ttttouchme">
+    <a class="flex items-end mt-16 -mr-16" href="works#ttttouchme">
         <img
             class="w-5/8"
             src="images/stills/t-t-t-touch-me_filmstill1_low.jpg"
@@ -82,26 +87,21 @@ import Layout from "../layouts/Layout.astro";
         <p class="flex-1 pb-2 mx-4 border-b border-beige">t t t touch me</p>
         <div class="-mb-1 text-l text-red font-ocr-t">2017</div>
     </a>
-    <a class="flex flex-row-reverse items-end mt-16" href="works#a1224">
+    <a class="flex flex-row-reverse items-end mt-16 -ml-16" href="works#a1224">
         <img class="w-1/2" src="images/stills/12-24_01-web_low.jpg" />
-        <p class="flex-1 pb-2 mx-4 border-b border-beige">
-            12 24
-        </p>
+        <p class="flex-1 pb-2 mx-4 border-b border-beige">12 24</p>
         <div class="-mb-1 text-l text-red font-ocr-t">2017/18</div>
     </a>
-    <a class="flex items-end mt-16" href="works#venive">
-        <img
-            class="w-1/2"
-            src="images/stills/VenìVe_Videostill4-web_low.jpg"
-        />
+    <a class="flex items-end mt-16 -mr-16" href="works#venive">
+        <img class="w-1/2" src="images/stills/VenìVe_Videostill4-web_low.jpg" />
         <p class="flex-1 pb-2 mx-4 border-b border-beige">¡Vení Ve!</p>
         <div class="-mb-1 text-l text-red font-ocr-t">2016</div>
     </a>
-    <a class="flex flex-row-reverse items-end mt-16" href="publications#thirdgen">
-        <img
-            class="w-3/8"
-            src="images/books/3rdG_Repro_01.jpg"
-        />
+    <a
+        class="flex flex-row-reverse items-end mt-16 -ml-16"
+        href="publications#thirdgen"
+    >
+        <img class="w-3/8" src="images/books/3rdG_Repro_01.jpg" />
         <p class="flex-1 pb-2 mx-4 border-b border-beige">3rd generation</p>
         <div class="-mb-1 text-l text-red font-ocr-t">2014</div>
     </a>
