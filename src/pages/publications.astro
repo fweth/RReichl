@@ -8,7 +8,7 @@ import Bilingual from "../components/Bilingual.astro";
     description="Publications by artist and film maker Raphael Reichl."
     sectionNames={[
         ["andar", "Essay: Andar pisando en cascarones arenosos"],
-        ["teteatete", "Têtê-à-Têtê"],
+        ["teteatete", "Tête-à-Tête"],
         ["iwanttodisappear", "I want to disappear"],
         ["dondevivoyo", "Donde vivo yo"],
         ["verruecktegeometrie", "Verrückte Geometrie"],
@@ -47,6 +47,12 @@ import Bilingual from "../components/Bilingual.astro";
                 <p class="text-red text-l">Raphael Reichl</p>
             </Fragment>
         </Bilingual>
+        <div class="grid grid-cols-2 gap-4 mt-4">
+            <img
+                class="col-span-2"
+                src="images/expo/Cascarones_Reichl_Doku_33-web.jpg"
+            />
+        </div>
     </section>
     <section class="mt-16" id="teteatete">
         <Bilingual>
@@ -73,7 +79,7 @@ import Bilingual from "../components/Bilingual.astro";
                 </p>
                 <p class="mt-2 italic text-red">Graphic Design</p>
                 <p class="text-l text-red">Raphael Reichl</p>
-                <p class="mt-4 w-5/8 indent-4">
+                <p class="mt-6 w-5/8 indent-4">
                     A project by the Department of Art with extended visual
                     space-action/sculpture/installation in public space under
                     the direction of Judith Huemer and the collaboration of
@@ -91,7 +97,7 @@ import Bilingual from "../components/Bilingual.astro";
                     railway station or shopping centres.
                 </p>
                 <p class="w-5/8">(Text by Judith Huemer)</p>
-                <p class="mt-4 border-b text-l text-red border-beige">
+                <p class="mt-6 border-b text-l text-red border-beige">
                     Fotos by Digitale Fotowerkstatt, University of Applied Arts
                     Vienna
                 </p>
@@ -119,7 +125,7 @@ import Bilingual from "../components/Bilingual.astro";
                 </p>
                 <p class="mt-2 italic text-red">Grafik</p>
                 <p class="text-l text-red">Raphael Reichl</p>
-                <p class="mt-4 w-5/8 indent-4">
+                <p class="mt-6 w-5/8 indent-4">
                     Ein Projekt vom Fachbereich Kunst mit erweiterter
                     malerischer Raum-Aktion / Skulptur / Installation im
                     öffentlichen Raum unter der Leitung von Judith Huemer und
@@ -138,22 +144,23 @@ import Bilingual from "../components/Bilingual.astro";
                     Seele der Stadt präsent werden zu lassen.
                 </p>
                 <p class="w-5/8">(Text von Judith Huemer)</p>
-                <p class="mt-4 border-b text-l text-red border-beige">
+                <p class="mt-6 border-b text-l text-red border-beige">
                     Fotos: Digitale Fotowerkstatt, Universität für angewandte
                     Kunst, Wien
                 </p>
             </Fragment>
         </Bilingual>
-        <div class="flex flex-col gap-4 mt-4">
-            {
-                Array.from({ length: 10 }, (_, i) => (
-                    <img
-                        src={`images/books/TaT_Repro_${(i + 1)
-                            .toString()
-                            .padStart(2, "0")}.jpg`}
-                    />
-                ))
-            }
+        <div class="grid grid-cols-2 gap-4 mt-4">
+            <img src="images/books/TaT_Repro_01.jpg" />
+            <img src="images/books/TaT_Repro_02.jpg" />
+            <img src="images/books/TaT_Repro_03.jpg" />
+            <img src="images/books/TaT_Repro_04.jpg" />
+            <img src="images/books/TaT_Repro_05.jpg" />
+            <img src="images/books/TaT_Repro_06.jpg" />
+            <img src="images/books/TaT_Repro_07.jpg" />
+            <img src="images/books/TaT_Repro_08.jpg" />
+            <img src="images/books/TaT_Repro_09.jpg" />
+            <img src="images/books/TaT_Repro_10.jpg" />
         </div>
     </section>
     <section class="mt-16" id="iwanttodisappear">
@@ -178,7 +185,7 @@ import Bilingual from "../components/Bilingual.astro";
         <p class="text-l text-red">Mafalda Rakoš</p>
         <p class="mt-2 italic text-red">Graphic Design</p>
         <p class="text-l text-red">Raphael Reichl</p>
-        <p class="mt-4 w-5/8 indent-4">
+        <p class="mt-6 w-5/8 indent-4">
             Eating Disorders are not just about food or the desire to be thin,
             and they are much more widespread than commonly assumed. One out of
             ten women, so the current hypothesis, struggles with Anorexia,
@@ -193,16 +200,17 @@ import Bilingual from "../components/Bilingual.astro";
         <p class="mt-4 border-b text-l text-red border-beige">
             Fotos by Digitale Fotowerkstatt, University of Applied Arts Vienna
         </p>
-        <div class="flex flex-col gap-4 mt-4">
-            {
-                Array.from({ length: 10 }, (_, i) => (
-                    <img
-                        src={`images/books/Idwd_Repro_${(i + 1)
-                            .toString()
-                            .padStart(2, "0")}.jpg`}
-                    />
-                ))
-            }
+        <div class="grid grid-cols-2 gap-4 mt-4">
+            <img src="images/books/Idwd_Repro_01.jpg" />
+            <img src="images/books/Idwd_Repro_02.jpg" />
+            <img src="images/books/Idwd_Repro_03.jpg" />
+            <img src="images/books/Idwd_Repro_04.jpg" />
+            <img src="images/books/Idwd_Repro_05.jpg" />
+            <img src="images/books/Idwd_Repro_06.jpg" />
+            <img src="images/books/Idwd_Repro_07.jpg" />
+            <img src="images/books/Idwd_Repro_08.jpg" />
+            <img src="images/books/Idwd_Repro_09.jpg" />
+            <img src="images/books/Idwd_Repro_10.jpg" />
         </div>
     </section>
     <section class="mt-16" id="dondevivoyo">
@@ -285,16 +293,13 @@ import Bilingual from "../components/Bilingual.astro";
             </p>
         </Bilingual>
     </section>
-    <div class="flex flex-col gap-4 mt-4">
-        {
-            Array.from({ length: 6 }, (_, i) => (
-                <img
-                    src={`images/books/DVY_Repro_${(i + 1)
-                        .toString()
-                        .padStart(2, "0")}.jpg`}
-                />
-            ))
-        }
+    <div class="grid grid-cols-2 gap-4 mt-4">
+        <img src="images/books/DVY_Repro_01.jpg" />
+        <img src="images/books/DVY_Repro_02.jpg" />
+        <img src="images/books/DVY_Repro_03.jpg" />
+        <img src="images/books/DVY_Repro_04.jpg" />
+        <img src="images/books/DVY_Repro_05.jpg" />
+        <img src="images/books/DVY_Repro_06.jpg" />
     </div>
     <section class="mt-16" id="verruecktegeometrie">
         <Bilingual>
@@ -341,21 +346,30 @@ import Bilingual from "../components/Bilingual.astro";
                 </p>
                 <p class="mt-4 italic text-red">Autor:innen</p>
                 <p class="text-l text-red">
-                    Esther Stocker & Co. (to be added)
+                    Monika Machnicki, Günther Oberhollenzer, Esther Stocker,
+                    Karine Tissot
                 </p>
                 <p class="mt-2 italic text-red">Herausgeber</p>
-                <p class="text-l text-red">Kerber Publishing House</p>
+                <p class="text-l text-red">
+                    Esther Stocker und Günther Oberhollenzer
+                </p>
+                <p class="mt-2 italic text-red">Verlag</p>
+                <p class="text-l text-red">Kerber Verlag</p>
                 <p class="mt-2 italic text-red">Grafik Design</p>
                 <p class="text-l text-red">Raphael Reichl</p>
                 <p class="mt-4">
-                    Katalog für die renommierte Künstlerin Esther Stocker mit
-                    einem Umfang von über 20 Jahre künstlerischen Schaffens.
+                    Das Kunstbuch dokumentiert das umfangreiche Schaffen der in
+                    Wien lebenden Künstlerin mit einem Schwerpunkt auf dem
+                    malerischen Werk und den raumgreifenden Installationen,
+                    ergänzt durch kunsthistorische Essays von Karine Tissot und
+                    Monika Machnicki sowie ein vertiefendes Gespräch, das
+                    Günther Oberhollenzer mit der Künstlerin geführt hat.
                 </p>
                 <a
                     class="mt-4 text-beige"
-                    href="https://www.estherstocker.net/"
+                    href="https://www.kerberverlag.com/de/1132/esther-stocker"
                 >
-                    Esther Stocker 🡥
+                    Verrückte Geometrie, Esther Stocker 🡥
                 </a>
             </Fragment>
             <p class="mt-4 border-b text-l text-red border-beige">
@@ -364,16 +378,17 @@ import Bilingual from "../components/Bilingual.astro";
             </p>
         </Bilingual>
     </section>
-    <div class="flex flex-col gap-4 mt-4">
-        {
-            Array.from({ length: 10 }, (_, i) => (
-                <img
-                    src={`images/books/VG_Repro_${(i + 1)
-                        .toString()
-                        .padStart(2, "0")}.jpg`}
-                />
-            ))
-        }
+    <div class="grid grid-cols-2 gap-4 mt-4">
+        <img src="images/books/VG_Repro_01.jpg" />
+        <img src="images/books/VG_Repro_02.jpg" />
+        <img src="images/books/VG_Repro_03.jpg" />
+        <img src="images/books/VG_Repro_04.jpg" />
+        <img src="images/books/VG_Repro_05.jpg" />
+        <img src="images/books/VG_Repro_06.jpg" />
+        <img src="images/books/VG_Repro_07.jpg" />
+        <img src="images/books/VG_Repro_08.jpg" />
+        <img src="images/books/VG_Repro_09.jpg" />
+        <img src="images/books/VG_Repro_10.jpg" />
     </div>
     <section class="mt-16" id="ziegelsteine">
         <Bilingual>
@@ -433,16 +448,15 @@ import Bilingual from "../components/Bilingual.astro";
                 </p>
             </Fragment>
         </Bilingual>
-        <div class="flex flex-col gap-4 mt-4">
-            {
-                Array.from({ length: 8 }, (_, i) => (
-                    <img
-                        src={`images/books/ZaS_Repro_${(i + 1)
-                            .toString()
-                            .padStart(2, "0")}.jpg`}
-                    />
-                ))
-            }
+        <div class="grid grid-cols-2 gap-4 mt-4">
+            <img src="images/books/ZaS_Repro_01.jpg"/>
+            <img src="images/books/ZaS_Repro_02.jpg"/>
+            <img src="images/books/ZaS_Repro_03.jpg"/>
+            <img src="images/books/ZaS_Repro_04.jpg"/>
+            <img src="images/books/ZaS_Repro_05.jpg"/>
+            <img src="images/books/ZaS_Repro_06.jpg"/>
+            <img src="images/books/ZaS_Repro_07.jpg"/>
+            <img src="images/books/ZaS_Repro_08.jpg"/>
         </div>
     </section>
     <section class="mt-16" id="thirdgen">
@@ -538,16 +552,16 @@ import Bilingual from "../components/Bilingual.astro";
                 </p>
             </Fragment>
         </Bilingual>
-        <div class="flex flex-col gap-4 mt-4">
-            {
-                Array.from({ length: 9 }, (_, i) => (
-                    <img
-                        src={`images/books/3rdG_Repro_${(i + 1)
-                            .toString()
-                            .padStart(2, "0")}.jpg`}
-                    />
-                ))
-            }
+        <div class="grid grid-cols-2 gap-4 mt-4">
+            <img src="images/books/3rdG_Repro_01.jpg"/>
+            <img src="images/books/3rdG_Repro_02.jpg"/>
+            <img src="images/books/3rdG_Repro_03.jpg"/>
+            <img src="images/books/3rdG_Repro_04.jpg"/>
+            <img src="images/books/3rdG_Repro_05.jpg"/>
+            <img src="images/books/3rdG_Repro_06.jpg"/>
+            <img src="images/books/3rdG_Repro_07.jpg"/>
+            <img src="images/books/3rdG_Repro_08.jpg"/>
+            <img src="images/books/3rdG_Repro_09.jpg"/>
         </div>
     </section>
 </Layout>
