@@ -1,19 +1,108 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import FiftyFifty from "../components/FiftyFifty.astro";
 ---
 
 <Layout
-	title="Raphael Reichl"
-	description="Personal website of artist Raphael Reichl, based in Vienna / Mexico City."
-	sectionNames={[]}
+    title="Raphael Reichl"
+    description="Personal website of artist Raphael Reichl, based in Vienna / Mexico City."
+    sectionNames={[]}
 >
-	<FiftyFifty imgSrc="expo/Cascarones_Reichl_Doku_13-web.jpg" imgWidth="58%" year={2022} dir="rtl">
-		Andar pisando en cascarones arenosos /<br />
-		Auf sandigen Eierschalen laufen
-	</FiftyFifty>
-	<FiftyFifty imgSrc="from-pdf-001.jpg" imgWidth="45%" year={2022} dir="ltr">
-		Ahuehuete.<br />
-		Thee ancient water tree
-	</FiftyFifty>
+    <a class="flex items-end" href="works#andar">
+        <img
+            class="w-5/8"
+            src="images/expo/Cascarones_Reichl_Doku_13-web.jpg"
+        />
+        <p class="flex-1 pb-2 mx-4 border-b border-beige">
+            Andar pisando en cascarones arenosos /
+            <br />
+            Auf sandigen Eierschalen laufen
+        </p>
+        <div class="-mb-1 text-l text-red font-ocr-t">2022</div>
+    </a>
+    <a class="flex flex-row-reverse items-end mt-16" href="works#ahuehuete">
+        <img
+            class="w-1/2"
+            src="images/stills/Ahuehuete_Still01-web_low.jpg"
+        />
+        <p class="flex-1 pb-2 mx-4 border-b border-beige">
+            Ahuehuete.
+            <br />
+            The ancient water tree
+        </p>
+        <div class="-mb-1 text-l text-red font-ocr-t">2022</div>
+    </a>
+    <a class="flex items-end mt-16" href="works#icantsee">
+        <img class="w-3/8" src="images/expo/WaldvorlauterBaume_04-web.jpg" />
+        <p class="flex-1 pb-2 mx-4 border-b border-beige">
+            I can't see the forest for the trees anymore
+            <br />
+            marked and unframed (Serie 1&mdash;3)
+        </p>
+        <div class="-mb-1 text-l text-red font-ocr-t">2021</div>
+    </a>
+    <a class="flex flex-row-reverse items-end mt-16" href="works#pah">
+        <img class="w-3/8" src="images/expo/P.A.H._ImVorbei_Doku02-web.jpg" />
+        <p class="flex-1 pb-2 mx-4 border-b border-beige">
+            P.A.H. (Schwedenhilfe)
+        </p>
+        <div class="-mb-1 text-l text-red font-ocr-t">2019</div>
+    </a>
+    <a class="flex items-end mt-16" href="works#theerased">
+        <img class="w-3/8" src="images/expo/Erasedbrain_02-web.jpg" />
+        <p class="flex-1 pb-2 mx-4 border-b border-beige">The erased brain</p>
+        <div class="-mb-1 text-l text-red font-ocr-t">2019</div>
+    </a>
+    <a class="flex flex-row-reverse items-end mt-16" href="works#revolvere">
+        <img class="w-3/8" src="images/expo/revolvere_doku_01-web.jpg" />
+        <p class="flex-1 pb-2 mx-4 border-b border-beige">revolvere</p>
+        <div class="-mb-1 text-l text-red font-ocr-t">2018</div>
+    </a>
+    <a class="flex items-end mt-16" href="work#redgreenbirth">
+        <img
+            class="w-3/8"
+            src="images/stills/RotGrünGeburt_Filmstill1-web.jpg"
+        />
+        <p class="flex-1 pb-2 mx-4 border-b border-beige">Rot Grün Geburt</p>
+        <div class="-mb-1 text-l text-red font-ocr-t">2018</div>
+    </a>
+    <a class="flex flex-row-reverse items-end mt-16" href="dondevivoyo#dondevivoyo">
+        <img class="w-1/2" src="images/books/DVY_Repro_01.jpg" />
+        <p class="flex-1 pb-2 mx-4 border-b border-beige">
+            See, Hear & Remain Silent
+            <br />
+            Donde vivo yo
+        </p>
+        <div class="-mb-1 text-l text-red font-ocr-t">2017/18</div>
+    </a>
+    <a class="flex items-end mt-16" href="works#ttttouchme">
+        <img
+            class="w-5/8"
+            src="images/stills/t-t-t-touch-me_filmstill1_low.jpg"
+        />
+        <p class="flex-1 pb-2 mx-4 border-b border-beige">t t t touch me</p>
+        <div class="-mb-1 text-l text-red font-ocr-t">2017</div>
+    </a>
+    <a class="flex flex-row-reverse items-end mt-16" href="works#a1224">
+        <img class="w-1/2" src="images/stills/12-24_01-web_low.jpg" />
+        <p class="flex-1 pb-2 mx-4 border-b border-beige">
+            12 24
+        </p>
+        <div class="-mb-1 text-l text-red font-ocr-t">2017/18</div>
+    </a>
+    <a class="flex items-end mt-16" href="works#venive">
+        <img
+            class="w-1/2"
+            src="images/stills/VenìVe_Videostill4-web_low.jpg"
+        />
+        <p class="flex-1 pb-2 mx-4 border-b border-beige">¡Vení Ve!</p>
+        <div class="-mb-1 text-l text-red font-ocr-t">2016</div>
+    </a>
+    <a class="flex flex-row-reverse items-end mt-16" href="publications#thirdgen">
+        <img
+            class="w-3/8"
+            src="images/books/3rdG_Repro_01.jpg"
+        />
+        <p class="flex-1 pb-2 mx-4 border-b border-beige">3rd generation</p>
+        <div class="-mb-1 text-l text-red font-ocr-t">2014</div>
+    </a>
 </Layout>

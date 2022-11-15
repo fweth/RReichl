@@ -1,0 +1,20 @@
+---
+import LayoutBare from "../layouts/LayoutBare.astro";
+---
+
+<LayoutBare>
+    <main class="flex flex-col justify-center items-center h-screen">
+        <div class="ml-48 w-48">
+            <p class="font-ocr-t text-red">welcome to</p>
+            <h1 class="text-xl text-red">Raphael Reichl</h1>
+            <p class="mt-4 text-beige">
+                artist and filmmaker
+                <br />
+                based in Vienna and Mexico City
+            </p>
+        </div>
+        <svg class="-mt-4 -ml-16 h-48 text-red">
+            <use href="outline.svg#main"></use>
+        </svg>
+    </main>
+</LayoutBare>

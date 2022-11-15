@@ -1,0 +1,318 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Bilingual from "../components/Bilingual.astro";
+---
+
+<Layout
+    title="Raphael Reichl"
+    description="Personal website of artist Raphael Reichl, based in Vienna / Mexico City."
+    sectionNames={[
+        ["intro", "Introductoin"],
+        ["education", "Education"],
+        ["prices", "Prices & Residencies"],
+        ["exhibitions", "Exhibitions"],
+    ]}
+>
+    <p class="text-xl font-bold text-red">Raphael Reichl</p>
+    <section id="intro">
+        <Bilingual>
+            <Fragment slot="en">
+                <p class="mt-4 text-l text-red">
+                    was born in Klosterneuburg in 1994.
+                    <br />
+                    Lives and works in Vienna / Mexico City.
+                </p>
+                <p class="mt-4 w-5/8">
+                    Raphael Reichl's artistic practice addresses
+                    cultural-philosophical ways of thinking as well as the order
+                    of socio-political conditions. Dispositives of power are
+                    revealed and marginalised social groups and the grievances
+                    in which they live are made visible through photography and
+                    film. Reichl combines perceptions between digital and
+                    analogue realities in the form of media-reflexive and
+                    site-specific installations, using both a documentary and
+                    fictional narrative style.
+                </p>
+            </Fragment>
+            <Fragment slot="de">
+                <p class="mt-4 text-l text-red">
+                    ist geboren 1994 in Klosterneuburg.
+                    <br />
+                    lebt und arbeitet in Wien / Mexiko Stadt.
+                </p>
+                <p class="w-5/8">
+                    Die künstlerische Praxis von Raphael Reichl thematisiert
+                    kultur-philosophische Denkweisen als auch die Ordnung
+                    sozial-politischer Verhältnisse. Dispositive der Macht
+                    werden offen gelegt und marginalisierte Gesellschaftsgruppen
+                    sowie die Missstände, in denen sie leben, mittels Fotografie
+                    und Film sichtbar gemacht. Wahrnehmungen zwischen digitalen
+                    und analogen Realitäten verbindet Reichl in Form von
+                    medienreflexiven und ortsbezogenen Installationen, wobei er
+                    sich sowohl einer dokumentarischen wie fiktiven Erzählweise
+                    bedient.
+                </p>
+            </Fragment>
+        </Bilingual>
+    </section>
+    <section class="mt-16 text-beige" id="education">
+        <Bilingual>
+            <Fragment slot="en">
+                <h2 class="text-xl font-bold">Education</h2>
+
+                <p class="mt-4">
+                    2017&mdash;2022
+                    <br />
+                    University of Applied Arts Vienna Site-Specific Art (Paul Petritsch)
+                </p>
+                <p class="mt-4">
+                    2016&mdash;2017
+                    <br />
+                    Schule Friedl Kubelka, School for Indipendent Film, Vienna
+                </p>
+                <p class="mt-4">
+                    2015&mdash;2016<br />
+                    Civil service abroad, Fundación Casa de los Tres Mundos, Nicaragua
+                </p>
+                <p class="mt-4">
+                    2014&mdash;2018
+                    <br />
+                    University of Vienna, Social and Culture Anthropology
+                </p>
+                <p class="mt-4">
+                    2008&mdash;2014
+                    <br />
+                    Höhere Graphische BlVa, Graphic Design and Communication (incl.
+                    Masterclass)
+                </p>
+            </Fragment>
+            <Fragment slot="de">
+                <h2 class="text-xl font-bold">Ausbildung</h2>
+
+                <p class="mt-4">
+                    2017 &ndash; 2022
+                    <br />
+                    Universität für angewandte Kunst Wien, Studium der Ortsbezogenen
+                    Kunst (Paul Petritsch)
+                </p>
+                <p class="mt-4">
+                    2016 &ndash; 2017
+                    <br />
+                    Schule Friedl Kubelka für unabhängigen Film, Wien
+                </p>
+                <p class="mt-4">
+                    2015 &ndash; 2016
+                    <br />
+                    Auslandsdienst, Fundación Casa de los Tres Mundos, Nicaragua
+                </p>
+                <p class="mt-4">
+                    2014 &ndash; 2018
+                    <br />
+                    Universität Wien, Studium der Kultur- und Sozialanthropolgie
+                </p>
+                <p class="mt-4">
+                    2008 &ndash; 2014 Höhere Graphische BlVa, Grafik und
+                    Kommunikationsdesign (Meisterklasse)
+                </p>
+            </Fragment>
+        </Bilingual>
+    </section>
+    <section class="mt-8 text-beige" id="prices">
+        <Bilingual>
+            <Fragment slot="en">
+                <h2 class="text-xl font-bold">Prizes and Residencies</h2>
+                <div class="mt-4 grid grid-cols-[32px_1fr] gap-4">
+                    <time>2022</time>
+                    <p>Award winner of Prize of the Kunsthalle Vienna</p>
+                    <time>2021</time>
+                    <p>
+                        Scholarship Abroad, Internship in Mexico, University of
+                        Applied Arts Vienna
+                    </p>
+                    <time>2019</time>
+                    <p>2019 Awardee, 20 Seconds of Art, KÖR, Vienna</p>
+                </div>
+            </Fragment>
+            <Fragment slot="de">
+                <h2 class="text-xl font-bold">Prizes and Residencies</h2>
+                <div class="mt-4 grid grid-cols-[32px_1fr] gap-4">
+                    <time>2022</time>
+                    <p>Preisträger des Kunsthallenpreises, Wien</p>
+                    <time>2021</time>
+                    <p>
+                        Auslandsstipendium, Auslandspraktikum in Mexiko,
+                        Angewandte Wien
+                    </p>
+                    <time>2019</time>
+                    <p>Preisträger, 20 Seconds of Art, KÖR</p>
+                </div>
+            </Fragment>
+        </Bilingual>
+    </section>
+    <section class="mt-8 text-beige" id="exhibitions">
+        <Bilingual>
+            <Fragment slot="en">
+                <h2 class="mt-6 text-xl font-bold">
+                    Exhibitions and Screenings <span class="font-normal">
+                        (Extracts)
+                    </span>
+                </h2>
+                <div class="mt-4 grid grid-cols-[32px_1fr] gap-4">
+                    <time>2022</time>
+                    <p>
+                        <i>Handeln Im Jetzt</i>, Ö1 Talentstipendium Shortlist,
+                        Leopold Museum, Vienna, Austria
+                        <br />
+                        <i>12 24</i>, DRKROOM & FRIENDS, 23. Dresdner
+                        Schmalfilmtage, Dresden, Germany
+                        <br />
+                        <i>Ahuehuete</i>. The ancient water tree, Learning by
+                        Heart, mumok kino, Vienna, Austria
+                        <br />
+                        <i>Ahuehuete</i>. The ancient water tree, Status: In der
+                        Feldforschung (2), Foto Wien, Vienna, Austria
+                    </p>
+                    <time>2021</time>
+                    <p>
+                        <i>P.A.H. (Schwedenhilfe)</i>, analog film is alive, Rot
+                        Licht Festival, Vienna, Austria
+                        <br />
+                        <i>Sehen, Hören & Schweigen</i>, in between places,
+                        Fotogalerie Wien, Vienna, Austria
+                        <br />
+                        <i>marked and unframed (1&mdash;3), Deal With It.</i>,
+                        Angewandte Festival, Universität für angewandte Kunst,
+                        Vienna, Austria
+                    </p>
+                    <time>2020</time>
+                    <p>
+                        <i>t t t touch me</i>, Rituale IV: Körper, Fotogalerie
+                        Wien, Vienna, Austria
+                    </p>
+                    <time>2019</time>
+                    <p>
+                        <i>Red Green Birth</i>, 10 Jahre filmkoop wien,
+                        Filmmuseum Wien, Austria
+                        <br />
+                        <i>t t t touch me</i>, Two Journeys, Echo Park Film
+                        Centre, Los Angeles, USA
+                        <br />
+                        <i>t t t touch me</i>, 20 Seconds of Art, KÖR, Vienna,
+                        Austria
+                        <br />
+                        <i>P.A.H. (Schwedenhilfe)</i>, IM VORBEI, Per Albin #3,
+                        KÖR / dotdotdot, Vienna, Austria
+                        <br />
+                        <i>Oscurasia H16</i>, Analog Layers, Foto Wien, Vienna,
+                        Austria
+                    </p>
+                    <time>2018</time>
+                    <p>
+                        <i>12 24</i>, Programm Labs, 64. Intenrationale
+                        Kurzfilmtage, Oberhausen, Germany
+                        <br />
+                        <i>notprojektion</i>, pubic viewing, notgalerie
+                        Seestadt, Vienna, Austria
+                        <br />
+                        <i>t t t touch me</i>, Klang Licht Zeit, Stadtkino im
+                        Künstlerhaus, Vienna, Austria
+                        <br />
+                        <i>revolvere</i>, Activate the Territories, Universität
+                        für angewandte Kunst, Expositur Paulusplatz, Vienna,
+                        Austria
+                    </p>
+                    <time>2017</time>
+                    <p>
+                        <i>Vení Ve</i>, Galerie Brodac, Sarajevo, Bosnia and
+                        Herzegovina
+                        <br />
+                        <i>12 24</i>, Schule Friedl Kubelka x Diagonale,
+                        WestLicht, Vienna, Austria / MIEFF Festival, Moskau,
+                        Russia
+                        <br />
+                        <i>t t t touch me</i>, Schule Friedl Kubelka, Metro Kino
+                        Kulturhaus, Vienna, Austria
+                    </p>
+                </div>
+            </Fragment>
+            <Fragment slot="de">
+                <h2 class="mt-6 font-bold">
+                    Ausstellungen und Screenings
+                    <span class="font-normal">Auswahl</span>
+                </h2>
+                <div class="mt-4 grid grid-cols-[32px_1fr] gap-4">
+                    <time>2022</time>
+                    <p>
+                        <i>Handeln Im Jetzt</i>, Ö1 Talentestipendium Shortlist,
+                        Leopold Museum, Wien
+                        <br />
+                        <i>12 24</i>, DRKROOM & FRIENDS, 23. Dresdner
+                        Schmalfilmtage, Dresden
+                        <br />
+                        <i>Ahuehuete. The ancient water tree</i>, Learning by
+                        Heart, mumok kino, Wien
+                        <br />
+                        <i>Ahuehuete. The ancient water tree</i>, Status: In der
+                        Feldforschung (2), Foto Wien, Wien
+                    </p>
+                    <time>2021</time>
+                    <p>
+                        <i>P.A.H. (Schwedenhilfe)</i>, analog film is alive, Rot
+                        Licht Festival, Wien
+                        <br />
+                        <i>Sehen, Hören & Schweigen</i>, in between places,
+                        Fotogalerie Wien, Wien
+                        <br />
+                        <i>marked and unframed (1&mdash;3), Deal With It.</i>,
+                        Angewandte Festival, Universität für angewandte Kunst,
+                        Wien
+                    </p>
+                    <time>2020</time>
+                    <p>
+                        <i>t t t touch me</i>, Rituale IV: Körper, Fotogalerie
+                        Wien, Wien
+                    </p>
+                    <time>2019</time>
+                    <p>
+                        <i>Red Green Birth</i>, 10 Jahre filmkoop wien,
+                        Filmmuseum Wien
+                        <br />
+                        <i>t t t touch me</i>, Two Journeys, Echo Park Film
+                        Centre, Los Angeles USA
+                        <br />
+                        <i>t t t touch me</i>, 20 Seconds of Art, KÖR, Wien
+                        <br />
+                        <i>P.A.H. (Schwedenhilfe)</i>, IM VORBEI, Per Albin #3,
+                        KÖR / dotdotdot, Wien
+                        <br />
+                        <i>Oscurasia H16</i>, Analog Layers, Foto Wien, Wien
+                    </p>
+                    <time>2018</time>
+                    <p class="mt-4">
+                        <i>12 24</i>, Programm Labs, 64. Intenrationale
+                        Kurzfilmtage, Oberhausen
+                        <br />
+                        <i>notprojektion</i>, pubic viewing, notgalerie
+                        Seestadt, Wien
+                        <br />
+                        <i>t t t touch me</i>, Klang Licht Zeit, Stadtkino im
+                        Künstlerhaus, Wien
+                        <br />
+                        <i>revolvere</i>, Activate the Territories, Universität
+                        für angewandte Kunst, Expositur Paulusplatz, Wien
+                    </p>
+                    <time>2017</time>
+                    <p class="mt-4">
+                        <i>Vení Ve</i>, Galerie Brodac, Sarajevo
+                        <br />
+                        <i>12 24</i>, Schule Friedl Kubelka x Diagonale,
+                        WestLicht, Wien / MIEFF Festival, Moskau
+                        <br />
+                        <i>t t t touch me</i>, Schule Friedl Kubelka, Metro Kino
+                        Kulturhaus, Wien
+                    </p>
+                </div>
+            </Fragment>
+        </Bilingual>
+    </section>
+</Layout>

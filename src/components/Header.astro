@@ -9,7 +9,7 @@ const location = path.length ? path : "index";
         "section"
     ) as NodeListOf<HTMLElement>;
     const links = document.querySelectorAll(
-        "a[href='#']"
+        "#section-links a"
     ) as NodeListOf<HTMLElement>;
     links.forEach(function (link, index) {
         link.onclick = function (e) {
@@ -18,6 +18,7 @@ const location = path.length ? path : "index";
         };
     });
     function scrollHandler() {
+        console.log("scroll");
         const scrollTop = document.documentElement.scrollTop;
         let active = Infinity;
         links.forEach(function (link, index) {
@@ -31,27 +32,25 @@ const location = path.length ? path : "index";
     }
     (window.onscroll = scrollHandler)();
 </script>
-<header class="fixed top-4 left-4 w-80 grid grid-cols-2">
+<header class="grid fixed top-4 left-4 grid-cols-2 w-80">
     <a class="col-start-2 text-xl text-red" href="/">Raphael Reichl</a>
-    <h1 class="col-start-2 text-l text-red font-ocr-t underline">{location}</h1>
-    <nav class="mr-4 text-beige text-right">
+    <h1 class="col-start-2 underline text-l text-red font-ocr-t">{location}</h1>
+    <nav class="mr-4 text-right text-beige">
         <a href="/works">works</a>
-        <a class="mt-1"     href="/collaborations">collaborations</a>
+        <a class="mt-1" href="/collaborations">collaborations</a>
         <a class="mt-1" href="/publications">publications</a>
         <a class="mt-1" href="/biography">biography</a>
     </nav>
-    <nav class="mt-2 min-h-32 pt-2 pb-4 pl-4 border-l">
+    <nav class="pt-2 pb-4 pl-4 mt-2 border-l min-h-32" id="section-links">
         {
-            sectionNames.map((name: string) => (
-                <a class="mt-1" href="#">
+            sectionNames.map(([id, name]: [string, string]) => (
+                <a class="mt-1" href={`#${id}`}>
                     {name}
                 </a>
             ))
         }
     </nav>
-    <svg class="block w-full h-48 ml-8 -mt-4">
-        <g stroke="#66614e">
-            <use href="outline.svg#main"></use>
-        </g>
+    <svg class="block -mt-4 ml-8 w-full h-48 text-beige">
+        <use href="outline.svg#main"></use>
     </svg>
 </header>

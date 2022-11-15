@@ -7,9 +7,13 @@ import Vimeo from "../components/Vimeo.astro";
 <Layout
     title="collaborations"
     description="These are my collaborations"
-    sectionNames={[]}
+    sectionNames={[
+        ["istmo", "Istmo, a narrowing of land"],
+        ["dondevivoyo", "Donde vivo yo"],
+        ["veroircallar", "Ver, Oír Y Callar"]
+    ]}
 >
-    <section>
+    <section id="istmo">
         <Bilingual>
             <Fragment slot="en">
                 <h2 class="text-l text-red font-bold">
@@ -24,12 +28,12 @@ import Vimeo from "../components/Vimeo.astro";
                 <p class="text-l text-red">Mara Chavez</p>
                 <p class="mt-4 text-red italic">Camera and camera assistance</p>
                 <p class="text-l text-red">Raphael Reichl</p>
-                <p class="mt-6 w-2/3 indent-4">
+                <p class="mt-6 w-5/8 indent-4">
                     Isthmus (a narrowing of land) explores the indigenous
                     struggle against a new form of extractive colonialism in the
                     south of Mexico.
                 </p>
-                <p class="w-2/3 indent-4">
+                <p class="w-5/8 indent-4">
                     Between the Pacific Ocean and the Gulf of Mexico lies the
                     Isthmus of Tehuantepec, Latin America's windiest region. It
                     is largely inhabited by Zapotec and Ikoots people who draw
@@ -53,7 +57,7 @@ import Vimeo from "../components/Vimeo.astro";
                 <p class="text-l text-red">Mara Chavez</p>
                 <p class="mt-4 text-red italic">Kamera und Kameraassistenz</p>
                 <p class="text-l text-red">Raphael Reichl</p>
-                <p class="mt-6 w-2/3 indent-4">
+                <p class="mt-6 w-5/8 indent-4">
                     Zwischen dem Pazifischen Ozean und dem Golf von Mexiko liegt
                     die Landenge von Tehuantepec, Mexikos windigste Region. Es
                     wird größtenteils von Zapoteken und Ikoots bewohnt, die
@@ -70,14 +74,17 @@ import Vimeo from "../components/Vimeo.astro";
                 </p>
             </Fragment>
         </Bilingual>
-        <p class="mt-4 w-2/3">
+        <p class="mt-4 w-5/8">
             Mara Chavez is an Austrian-Mexican filmmaker. Her work combines
             research and storytelling to create visual narratives which explore
             the links between ecologies, extraction, memory and migration.
         </p>
-        <a class="mt-4 text-beige" href="https://marachavez.com">Mara Chavez</a>
+        <a class="mt-4 text-beige" href="https://marachavez.com"
+            >Mara Chavez 🡥</a
+        >
+        <img src="images/collab/Istmo,-a-narrowing-of-land_still1_web.jpg" />
     </section>
-    <section class="mt-8">
+    <section class="mt-8" id="dondevivoyo">
         <Bilingual>
             <Fragment slot="en">
                 <h2 class="text-l text-red font-bold">Donde vivo yo</h2>
@@ -100,12 +107,12 @@ import Vimeo from "../components/Vimeo.astro";
                 <p class="text-l text-red">Ingo Kapelari, Raphael Reichl</p>
                 <p class="mt-4 text-red italic">Graphic Design</p>
                 <p class="text-l text-red">Ingo Kapelari, Raphael Reichl</p>
-                <p class="mt-6 w-2/3 indent-4">
+                <p class="mt-6 w-5/8 indent-4">
                     Donde vivo yo is a social documentary and ethnographic photo
                     book project that deals with the realities of life,
                     especially of young people from Guatemala City.
                 </p>
-                <p class="w-2/3 indent-4">
+                <p class="w-5/8 indent-4">
                     It reports on political grievances, corruption, violence,
                     poverty, courage, resistance and the human rights situation.
                     Through the pictures and their related stories, we want to
@@ -128,16 +135,15 @@ import Vimeo from "../components/Vimeo.astro";
                 </p>
                 <p class="mt-4 text-red italic">Fotografie</p>
                 <p class="text-l text-red">Ingo Kapelari, Raphael Reichl</p>
-                <p class="text-l text-red">Ingo Kapelari, Raphael Reichl</p>
                 <p class="mt-4 text-red italic">Grafik</p>
-                <p class="text-l text-red">Ingo Kapelari, Raphael Reichl</p>
-                <p class="mt-6 w-2/3 indent-4">
+                <p class="text-l text-red">Raphael Reichl</p>
+                <p class="mt-6 w-5/8 indent-4">
                     Donde vivo yo ist ein sozialdokumentarisches und
                     ethnografisches Fotobuchprojekt, welches sich mit den
                     Lebensrealitäten, vor allem von Jugendlichen, aus Guatemala
                     Stadt auseinandersetzt.
                 </p>
-                <p class="w-2/3 indent-4">
+                <p class="w-5/8 indent-4">
                     Es berichtet über politische Missstände, Korruption, Gewalt,
                     Armut, Mut, sozialem Kampf und die menschenrechtliche
                     Situation. Durch die Bilder und deren verbundenen
@@ -146,9 +152,10 @@ import Vimeo from "../components/Vimeo.astro";
                 </p>
             </Fragment>
         </Bilingual>
-        <a class="mt-4 text-beige" href="https://amikaro.org/">Amikaro</a>
+        <a class="mt-4 text-beige" href="https://amikaro.org/">Amikaro 🡥</a>
+        <img src="images/collab/DVY_Repro_01.jpg" />
     </section>
-    <section class="mt-8">
+    <section class="mt-8" id="veroircallar">
         <Bilingual>
             <Fragment slot="en">
                 <h2 class="text-l text-red font-bold">Ver, Oír Y Callar</h2>
@@ -168,7 +175,7 @@ import Vimeo from "../components/Vimeo.astro";
                 <p class="text-l text-red">Raphael Reichl</p>
                 <p class="mt-4 text-red italic">Production</p>
                 <p class="text-l text-red">Amikaro</p>
-                <p class="mt-6 w-2/3 indent-4">
+                <p class="mt-6 w-5/8 indent-4">
                     La Limonada is one of the oldest settlements in Guatemala
                     City. Other marginal settlements were built later,
                     especially after the 1976 earthquake. Still others during
@@ -196,13 +203,13 @@ import Vimeo from "../components/Vimeo.astro";
                 </p>
                 <p class="mt-4 text-red italic">Regie</p>
                 <p class="text-l text-red">Fabian Kostner, Raphael Reichl</p>
-                <p class="mt-4 text-red italic">Kamera, Ton</p>
+                <p class="mt-2 text-red italic">Kamera, Ton</p>
                 <p class="text-l text-red">Raphael Reichl</p>
-                <p class="mt-4 text-red italic">Schnitt</p>
+                <p class="mt-2 text-red italic">Schnitt</p>
                 <p class="text-l text-red">Raphael Reichl</p>
-                <p class="mt-4 text-red italic">Produktion</p>
+                <p class="mt-2 text-red italic">Produktion</p>
                 <p class="text-l text-red">Amikaro</p>
-                <p class="mt-6 w-2/3 indent-4">
+                <p class="mt-6 w-5/8 indent-4">
                     La Limonada ist eine der ältesten Siedlungen in
                     Guatemala-Stadt. Andere marginale Siedlungen wurden erst
                     später, vor allem nach dem Erdbeben von 1976, gebaut. Wieder
@@ -217,7 +224,8 @@ import Vimeo from "../components/Vimeo.astro";
                 </p>
             </Fragment>
         </Bilingual>
-        <a class="mt-4 text-beige" href="https://amikaro.org/">Amikaro</a>
+        <a class="mt-4 text-l text-beige" href="https://amikaro.org/">Amikaro 🡥</a
+        >
         <Vimeo id="564217625" />
     </section>
 </Layout>

@@ -1,4 +1,5 @@
 ---
+import LayoutBare from "./LayoutBare.astro";
 import Header from "../components/Header.astro";
 const {
     title = "Raphael Reichl",
@@ -7,55 +8,16 @@ const {
 } = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width initial-scale=1" />
-        <meta name="generator" content={Astro.generator} />
-        <meta name="description" content={description} />
-        <title>{title}</title>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    </head>
-    <body>
-        <Header sectionNames={sectionNames} />
-        <main class="w-1/2 mt-64 ml-128 mb-64">
-            <div
-                class="sticky top-0 -mb-4 -mr-12 font-ocr-t text-l text-right text-red"
-            >
-                <button id="btn-lang-en" class="underline" disabled>en</button>
-                &nbsp;/&nbsp;
-                <button id="btn-lang-de">de</button>
-            </div>
-            <slot />
-        </main>
-        <style is:global>
-            @font-face {
-                font-family: "ChaparralPro";
-                src: url("/fonts/ChaparralPro-Regular.otf") format("opentype");
-            }
-            @font-face {
-                font-family: "ChaparralPro";
-                src: url("/fonts/ChaparralPro-Bold.otf") format("opentype");
-                font-weight: bold;
-            }
-            @font-face {
-                font-family: "ChaparralPro";
-                src: url("/fonts/ChaparralPro-LightItalic.otf")
-                    format("opentype");
-                font-style: italic;
-            }
-            @font-face {
-                font-family: "OcrT";
-                src: url("/fonts/OcrT.otf") format("opentype");
-            }
-            body {
-                font-family: "ChaparralPro";
-                font-size: 13px;
-            }
-            a {
-                display: block;
-            }
-        </style>
-    </body>
-</html>
+<LayoutBare title={title} description={description}>
+    <Header sectionNames={sectionNames} />
+    <main class="w-1/2 mt-64 ml-128 mb-64">
+        <div
+            class="sticky top-0 -mb-4 -mr-12 font-ocr-t text-l text-right text-red"
+        >
+            <button id="btn-lang-en" class="underline" disabled>en</button>
+            &nbsp;/&nbsp;
+            <button id="btn-lang-de">de</button>
+        </div>
+        <slot />
+    </main>
+</LayoutBare>
