@@ -140,7 +140,7 @@ import Vimeo from "../components/Vimeo.astro";
             </Fragment>
             <Fragment slot="de">
                 <h2 class="text-xl font-bold text-red">
-                    Ahuehuete [Der uralte Wasserbaum]
+                    Ahuehuete [Der alte Wasserbaum]
                 </h2>
                 <p class="mt-4 italic text-red">
                     Video, Farbe, Ton, 6 min
@@ -177,9 +177,17 @@ import Vimeo from "../components/Vimeo.astro";
             <img src="images/expo/Auhuehuete_FotoWien22_Doku_06.jpg" />
             <img src="images/expo/Auhuehuete_FotoWien22_Doku_36.jpg" />
         </div>
-        <p  class="mt-4 italic text-red">
+        <Bilingual>
+            <Fragment slot="en">
+            <p  class="mt-4 italic text-red">
+            Photos by Raphael Reichl
+            </p>
+            </Fragment>
+            <Fragment slot="de">
+            <p  class="mt-4 italic text-red">
             Fotos von Raphael Reichl
-        </p>
+            </p>
+        </Bilingual>
     </section>
     <section class="mt-16" id="icantsee">
         <Bilingual>
@@ -275,13 +283,24 @@ import Vimeo from "../components/Vimeo.astro";
             </Fragment>
         </Bilingual>
         <div class="grid grid-cols-2 gap-4 mt-4">
-            <img src="images/expo/WaldvorlauterBaume_01-web.jpg" />
-            <img src="images/expo/WaldvorlauterBaume_02-web.jpg" />
+            <img class="col-span-2" src="images/expo/WaldvorlauterBaume_01-web.jpg" />
+            <img class="col-span-2" src="images/expo/WaldvorlauterBaume_02-web.jpg" />
             <img src="images/expo/WaldvorlauterBaume_03-web.jpg" />
             <img src="images/expo/WaldvorlauterBaume_04-web.jpg" />
-            <img src="images/expo/WaldvorlauterBaume_05-web.jpg" />
-            <img src="images/expo/WaldvorlauterBaume_06-web.jpg" />
+            <img class="col-span-2" src="images/expo/WaldvorlauterBaume_05-web.jpg" />
+            <img class="col-span-2" src="images/expo/WaldvorlauterBaume_06-web.jpg" />
         </div>
+        <Bilingual>
+            <Fragment slot="en">
+            <p  class="mt-4 italic text-red">
+            Photos by Raphael Reichl
+            </p>
+            </Fragment>
+            <Fragment slot="de">
+            <p  class="mt-4 italic text-red">
+            Fotos von Raphael Reichl
+            </p>
+        </Bilingual>
     </section>
     <section class="mt-16" id="pah">
         <Bilingual>
@@ -346,9 +365,19 @@ import Vimeo from "../components/Vimeo.astro";
             </Fragment>
         </Bilingual>
         <div class="grid grid-cols-2 gap-4 mt-4">
-            <img src="images/expo/P.A.H._ImVorbei_Doku01-web.jpg" />
-            <img src="images/expo/P.A.H._ImVorbei_Doku02-web.jpg" />
-        </div>
+            <img class="col-span-2" src="images/expo/P.A.H._ImVorbei_Doku01-web.jpg" />
+            <img class="col-span-2" src="images/expo/P.A.H._ImVorbei_Doku02-web.jpg" />
+        <Bilingual>
+            <Fragment slot="en">
+            <p  class="mt-4 italic text-red">
+            Photos by Mira Klug
+            </p>
+            </Fragment>
+            <Fragment slot="de">
+            <p  class="mt-4 italic text-red">
+            Fotos von Mira Klug
+            </p>
+        </Bilingual>
         <Vimeo id="430772881" />
     </section>
     <section class="mt-16" id="theerased">
@@ -427,10 +456,21 @@ import Vimeo from "../components/Vimeo.astro";
             </Fragment>
         </Bilingual>
         <div class="grid grid-cols-2 gap-4 mt-4">
-            <img class="col-span-2" src="images/expo/Erasedbrain_01-web.jpg" />
+            <img class="col-span-2" src="images/expo/Erasedbrain_03-web.jpg" />
             <img src="images/expo/Erasedbrain_02-web.jpg" />
-            <img src="images/expo/Erasedbrain_03-web.jpg" />
+            <img src="images/expo/Erasedbrain_01-web.jpg" />
         </div>
+        <Bilingual>
+            <Fragment slot="en">
+            <p  class="mt-4 italic text-red">
+            Photos by Raphael Reichl
+            </p>
+            </Fragment>
+            <Fragment slot="de">
+            <p  class="mt-4 italic text-red">
+            Fotos von Raphael Reichl
+            </p>
+        </Bilingual>
         <Vimeo id="429307206" />
     </section>
     <section class="mt-16" id="revolvere">
@@ -533,6 +573,17 @@ import Vimeo from "../components/Vimeo.astro";
             <img src="images/expo/revolvere_doku_02-web.jpg" />
             <img src="images/expo/revolvere_doku_03-web.jpg" />
         </div>
+        <Bilingual>
+            <Fragment slot="en">
+            <p  class="mt-4 italic text-red">
+            Photos by Raphael Reichl
+            </p>
+            </Fragment>
+            <Fragment slot="de">
+            <p  class="mt-4 italic text-red">
+            Fotos von Raphael Reichl
+            </p>
+        </Bilingual>
         <Vimeo id="325199987" />
     </section>
     <section class="mt-16" id="redgreenbirth">
@@ -705,6 +756,17 @@ import Vimeo from "../components/Vimeo.astro";
             <img src="images/expo/ttttouchme_Fotogalerie_01-web.jpg" />
             <img src="images/expo/ttttouchme_Fotogalerie_01-web.jpg" />
         </div>
+        <Bilingual>
+            <Fragment slot="en">
+            <p  class="mt-4 italic text-red">
+            Photos by Fotogalerie Wien
+            </p>
+            </Fragment>
+            <Fragment slot="de">
+            <p  class="mt-4 italic text-red">
+            Fotos von Fotogalerie Wien
+            </p>
+        </Bilingual>
     </section>
     <section class="mt-16" id="a1224">
         <Bilingual>
