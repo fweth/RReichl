@@ -19,6 +19,7 @@ module.exports = {
             beige: "#66614e",
             black: "#000",
             red: "#b75450",
+            white: "#fff",
         },
         fontFamily: {
             "ocr-t": "OcrT",
