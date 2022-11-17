@@ -1,5 +1,4 @@
 ---
-import LayoutBare from "./LayoutBare.astro";
 import Header from "../components/Header.astro";
 const {
     title = "Raphael Reichl",
@@ -9,20 +8,61 @@ const {
 } = Astro.props;
 ---
 
-<LayoutBare title={title} description={description}>
-    <Header sectionNames={sectionNames} />
-    <main class="mt-64 mb-64 w-1/2 ml-128">
-        {
-            lang && (
-                <div class="sticky top-4 -mr-12 -mb-4 text-right font-ocr-t text-l text-red">
-                    <button id="btn-lang-en" class="underline" disabled>
-                        en
-                    </button>
-                    &nbsp;/&nbsp;
-                    <button id="btn-lang-de">de</button>
-                </div>
-            )
-        }
-        <slot />
-    </main>
-</LayoutBare>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width initial-scale=1" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content={description} />
+        <title>{title}</title>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    </head>
+    <body>
+        <Header sectionNames={sectionNames} />
+        <main class="mx-20 mt-64 mb-64 lg:w-1/2 lg:ml-96 xl:ml-128">
+            {
+                lang && (
+                    <div class="sticky top-4 -mr-12 -mb-4 text-right font-ocr-t text-l text-red">
+                        <button id="btn-lang-en" class="underline" disabled>
+                            {" "}
+                            en
+                        </button>
+                        &nbsp;/&nbsp;
+                        <button id="btn-lang-de">de</button>
+                    </div>
+                )
+            }
+            <slot />
+        </main>
+        <style is:global>
+            @font-face {
+                font-family: "ChaparralPro";
+                src: url("/fonts/ChaparralPro-Regular.otf") format("opentype");
+            }
+            @font-face {
+                font-family: "ChaparralPro";
+                src: url("/fonts/ChaparralPro-Bold.otf") format("opentype");
+                font-weight: bold;
+            }
+            @font-face {
+                font-family: "ChaparralPro";
+                src: url("/fonts/ChaparralPro-LightItalic.otf")
+                    format("opentype");
+                font-style: italic;
+            }
+            @font-face {
+                font-family: "OcrT";
+                src: url("/fonts/OcrT.otf") format("opentype");
+            }
+            body {
+                font-family: "ChaparralPro";
+                font-size: 13px;
+                scroll-behavior: smooth;
+            }
+            a {
+                display: block;
+            }
+        </style>
+    </body>
+</html>
