@@ -1,0 +1,13 @@
+---
+const { class: className, href } = Astro.props;
+---
+
+<a class={className} href={href}
+    ><slot /><svg class="inline-block ml-1 h-2" viewBox="0 0 10 10">
+        <g stroke="currentColor" stroke-linecap="round">
+            <line x1="1" y1="9" x2="8" y2="2"></line>
+            <line x1="2" y1="1" x2="8" y2="2"></line>
+            <line x1="9" y1="8" x2="8" y2="2"></line>
+        </g>
+    </svg>
+</a>

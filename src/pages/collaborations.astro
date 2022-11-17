@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Bilingual from "../components/Bilingual.astro";
+import Link from "../components/Link.astro";
 import Vimeo from "../components/Vimeo.astro";
 ---
 
@@ -10,7 +11,7 @@ import Vimeo from "../components/Vimeo.astro";
     sectionNames={[
         ["istmo", "Istmo, a narrowing of land"],
         ["dondevivoyo", "Donde vivo yo"],
-        ["veroircallar", "Ver, Oír Y Callar"]
+        ["veroircallar", "Ver, Oír Y Callar"],
     ]}
 >
     <section id="istmo">
@@ -79,9 +80,9 @@ import Vimeo from "../components/Vimeo.astro";
             research and storytelling to create visual narratives which explore
             the links between ecologies, extraction, memory and migration.
         </p>
-        <a class="mt-4 text-beige" href="https://marachavez.com"
-            >Mara Chavez 🡥</a
-        >
+        <Link class="mt-4 text-beige" href="https://marachavez.com">
+            Mara Chavez
+        </Link>
         <img src="images/collab/Istmo,-a-narrowing-of-land_still1_web.jpg" />
     </section>
     <section class="mt-8" id="dondevivoyo">
@@ -151,7 +152,7 @@ import Vimeo from "../components/Vimeo.astro";
                 </p>
             </Fragment>
         </Bilingual>
-        <a class="mt-4 text-beige" href="https://amikaro.org/">Amikaro 🡥</a>
+        <Link class="mt-4 text-beige" href="https://amikaro.org/">Amikaro</Link>
         <img src="images/collab/DVY_Repro_01.jpg" />
     </section>
     <section class="mt-8" id="veroircallar">
@@ -223,8 +224,9 @@ import Vimeo from "../components/Vimeo.astro";
                 </p>
             </Fragment>
         </Bilingual>
-        <a class="mt-4 text-l text-beige" href="https://amikaro.org/">Amikaro 🡥</a
-        >
+        <Link class="mt-4 text-l text-beige" href="https://amikaro.org/">
+            Amikaro
+        </Link>
         <Vimeo id="564217625" />
     </section>
 </Layout>
