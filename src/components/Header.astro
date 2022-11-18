@@ -37,7 +37,7 @@ const location = path.length ? path : "index";
     }
     (window.onscroll = scrollHandler)();
 </script>
-<header class="grid fixed top-4 left-4 grid-cols-2 w-80">
+<header class="grid lg:fixed top-4 left-4 grid-cols-2 w-80">
     <a class="col-start-2 text-xl text-red" href="/">Raphael Reichl</a>
     <h1 class="col-start-2 underline text-l text-red font-ocr-t">{location}</h1>
     <nav class="mr-4 text-right text-beige">
@@ -56,6 +56,6 @@ const location = path.length ? path : "index";
         }
     </nav>
     <svg class="block -mt-4 ml-8 w-full h-48 text-beige">
-        <use href="outline.svg#main"></use>
+        <use href="illustration.svg#outline"></use>
     </svg>
 </header>
