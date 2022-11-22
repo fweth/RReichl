@@ -1,6 +1,6 @@
 ---
 const { sectionNames = [] } = Astro.props;
-const path = decodeURI(Astro.url.pathname.slice(1));
+const path = Astro.url.pathname.slice(1).replace("-", " ");
 const location = path.length ? path : "index";
 ---
 
@@ -47,14 +47,14 @@ const location = path.length ? path : "index";
     }
     (window.onscroll = scrollHandler)();
 </script>
-<header class="pt-4 fixed top-0 w-screen bg-white fixed transition-transform translate-y-[calc(150px-100%)] lg:translate-y-0 lg:bg-transparent">
+<header class="pt-4 fixed top-0 w-screen bg-white fixed transition-transform translate-y-[calc(150px-100%)] cursor-pointer lg:translate-y-0 lg:bg-transparent">
 <div class="grid top-4 left-4 grid-cols-2 w-80">
     <a class="col-start-2 text-xl text-red" href="/">Raphael Reichl</a>
     <h1 class="col-start-2 underline text-l text-red font-ocr-t">{location}</h1>
     <nav class="mr-4 text-right text-beige">
         <a href="/works">works</a>
         <a class="mt-1" href="/collaborations">collaborations</a>
-        <a class="mt-1" href="/editorial design">editorial design</a>
+        <a class="mt-1" href="/editorial-design">editorial design</a>
         <a class="mt-1" href="/biography">biography</a>
     </nav>
     <nav class="pt-2 pb-4 pl-4 mt-2 border-l min-h-32" id="section-links">
