@@ -1,6 +1,6 @@
 ---
 const { sectionNames = [] } = Astro.props;
-const path = Astro.url.pathname.slice(1);
+const path = decodeURI(Astro.url.pathname.slice(1));
 const location = path.length ? path : "index";
 ---
 
