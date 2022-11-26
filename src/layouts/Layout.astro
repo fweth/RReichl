@@ -9,7 +9,7 @@ const {
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth scroll-pt-24 lg:scroll-pt-0">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width initial-scale=1" />
@@ -20,11 +20,10 @@ const {
     </head>
     <body>
         <Header sectionNames={sectionNames} />
-        <div class="overflow-y-auto mt-24 px-20 h-[calc(100vh-96px)] lg:h-screen lg:mt-0">
-        <main class="mt-24 mb-64 lg:w-1/2 lg:ml-96 xl:ml-128">
+        <main class="mx-20 mt-24 mb-64 lg:w-1/2 lg:ml-96 xl:ml-128">
             {
                 lang && (
-                    <div class="sticky -top-2 -mr-12 -mb-4 text-right lg:top-4 font-ocr-t text-l text-red">
+                    <div class="sticky top-24 -mr-12 -mb-4 text-right lg:top-4 font-ocr-t text-l text-red">
                         <button id="btn-lang-en" class="underline" disabled>
                             en
                         </button>
@@ -35,7 +34,9 @@ const {
             }
             <slot />
         </main>
-        <footer class="pt-2 mx-20 mb-64 border-t lg:w-1/2 lg:ml-96 xl:ml-128 border-beige">
+        <footer
+            class="pt-2 mx-20 mb-64 border-t lg:w-1/2 lg:ml-96 xl:ml-128 border-beige"
+        >
             <p class="text-l text-red">Raphael Reichl</p>
             <p class="mt-4">
                 Spittelauer Lände 15-21/11/25
@@ -45,10 +46,11 @@ const {
                 atelier [@] rpreichl.com
             </p>
 
-            <p class="mt-4"
-            >Für den Inhalt verantwortlich: Raphael Reichl
-            <br />    
-            Programmierung: Klaus Györgyfavay</p>
+            <p class="mt-4">
+                Für den Inhalt verantwortlich: Raphael Reichl
+                <br />
+                Programmierung: Klaus Györgyfavay
+            </p>
             <p class="mt-4 md:w-5/8">
                 Sämtliche auf der Website von Raphael Reichl veröffentlichten
                 Texte, Abbildungen, Grafiken, Videosequenzen, Tondokumente und
@@ -62,7 +64,6 @@ const {
             </p>
             <p class="mt-4">© Raphael Reichl, 2022. Alle Rechte vorbehalten.</p>
         </footer>
-    </div>
         <style is:global>
             @font-face {
                 font-family: "ChaparralPro";
@@ -86,7 +87,6 @@ const {
             body {
                 font-family: "ChaparralPro";
                 font-size: 13px;
-                scroll-behavior: smooth;
             }
             a {
                 display: block;
