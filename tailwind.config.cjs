@@ -26,11 +26,9 @@ module.exports = {
             "ocr-t": "OcrT",
         },
         fontSize: {
-            s: "12px",
             m: "14px",
             l: "15px",
             xl: "18px",
-            xxl: "24px",
         },
         spacing: { 0: "0", ...basePixels },
         extend: {
