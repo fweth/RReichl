@@ -20,7 +20,8 @@ const {
     </head>
     <body>
         <Header sectionNames={sectionNames} />
-        <main class="mx-20 mt-64 mb-64 lg:w-1/2 lg:ml-96 xl:ml-128">
+        <div class="overflow-y-auto mt-24 px-20 h-[calc(100vh-96px)] lg:h-screen lg:mt-0">
+        <main class="mt-24 mb-64 lg:w-1/2 lg:ml-96 xl:ml-128">
             {
                 lang && (
                     <div class="sticky top-4 -mr-12 -mb-4 text-right font-ocr-t text-l text-red">
@@ -35,7 +36,7 @@ const {
             }
             <slot />
         </main>
-        <footer class="pt-2 mx-20 mb-64 lg:w-1/2 lg:ml-96 xl:ml-128 border-t border-beige">
+        <footer class="pt-2 mx-20 mb-64 border-t lg:w-1/2 lg:ml-96 xl:ml-128 border-beige">
             <p class="text-l text-red">Raphael Reichl</p>
             <p class="mt-4">
                 Spittelauer Lände 15-21/11/25
@@ -62,6 +63,7 @@ const {
             </p>
             <p class="mt-4">© Raphael Reichl, 2022. Alle Rechte vorbehalten.</p>
         </footer>
+    </div>
         <style is:global>
             @font-face {
                 font-family: "ChaparralPro";

@@ -9,9 +9,9 @@ const location = path.length ? path : "index";
     let headerActive = false;
     header.onclick = function() {
         if(headerActive) {
-            header.classList.add("translate-y-[calc(150px-100%)]")
+            header.classList.add("translate-y-[calc(96px-100%)]")
         } else {
-            header.classList.remove("translate-y-[calc(150px-100%)]")
+            header.classList.remove("translate-y-[calc(96px-100%)]")
         }
         headerActive = !headerActive
     }
@@ -47,7 +47,7 @@ const location = path.length ? path : "index";
     }
     (window.onscroll = scrollHandler)();
 </script>
-<header class="pt-4 fixed top-0 w-screen bg-white fixed transition-transform translate-y-[calc(150px-100%)] cursor-pointer lg:translate-y-0 lg:bg-transparent">
+<header class="pt-4 fixed top-0 w-screen bg-white fixed transition-transform z-10 translate-y-[calc(96px-100%)] cursor-pointer lg:translate-y-0 lg:bg-transparent lg:w-96">
 <div class="grid top-4 left-4 grid-cols-2 w-80">
     <a class="col-start-2 text-xl text-red" href="/">Raphael Reichl</a>
     <h1 class="col-start-2 underline text-l text-red font-ocr-t">{location}</h1>
@@ -66,31 +66,8 @@ const location = path.length ? path : "index";
             ))
         }
     </nav>
-    <svg class="block mt-4 ml-8 w-full h-36 text-beige lg:h-48 lg:-mt-4">
+    <svg class="block mt-4 ml-8 w-full h-24 text-beige lg:h-48 lg:-mt-4">
         <use href="illustration.svg#outline"></use>
     </svg>
 </div>
 </header>
-
-<!-- <header class="grid top-4 left-4 grid-cols-2 w-80 lg:fixed">
-    <a class="col-start-2 text-xl text-red" href="/">Raphael Reichl</a>
-    <h1 class="col-start-2 underline text-l text-red font-ocr-t">{location}</h1>
-    <nav class="mr-4 text-right text-beige">
-        <a href="/works">works</a>
-        <a class="mt-1" href="/collaborations">collaborations</a>
-        <a class="mt-1" href="/editorial design">editorial design</a>
-        <a class="mt-1" href="/biography">biography</a>
-    </nav>
-    <nav class="pt-2 pb-4 pl-4 mt-2 border-l min-h-32" id="section-links">
-        {
-            sectionNames.map(([id, name]: [string, string]) => (
-                <a class="mt-1" href={`#${id}`}>
-                    {name}
-                </a>
-            ))
-        }
-    </nav>
-    <svg class="block -mt-4 ml-8 w-full h-48 text-beige">
-        <use href="illustration.svg#outline"></use>
-    </svg>
-</header> -->
