@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Teaser from "../components/Teaser.astro";
 ---
 
 <Layout
@@ -8,98 +9,104 @@ import Layout from "../layouts/Layout.astro";
     lang={false}
     sectionNames={[]}
 >
-    <a class="flex items-end -mr-16" href="works#andar">
-        <img
-            class="w-5/8"
-            src="images/expo/Cascarones_Reichl_Doku_13-web.jpg"
-        />
-        <p class="flex-1 pr-8 pb-1 ml-4 border-b border-beige">
-            Andar pisando en cascarones arenosos
-            [Walking on sandy eggshells]
-        </p>
-        <time class="-mb-1 w-8 text-right text-l text-red font-ocr-t">2022</time>
-    </a>
-    <a
-        class="flex flex-row-reverse items-end mt-16 -ml-16"
+    <Teaser
+        href="/works#andar"
+        imgSrc="/images/expo/Cascarones_Reichl_Doku_13-web.jpg"
+        imgWidth={500 / 8}
+        year={2022}
+    >
+        Andar pisando en cascarones arenosos
+        <br />
+        [Walking on sandy eggshells]
+    </Teaser>
+    <Teaser
         href="works#ahuehuete"
+        imgSrc="/images/stills/Ahuehuete_Still01-web_low.jpg"
+        imgWidth={50}
+        year={2022}
+        rtl
     >
-        <img class="w-1/2" src="images/stills/Ahuehuete_Still01-web_low.jpg" />
-        <p class="flex-1 pb-1 pl-8 mr-4 border-b border-beige">
-            Ahuehuete 
-            [The Ancient Water Tree]
-        </p>
-        <time class="-mb-1 w-8 text-l text-red font-ocr-t">2022</time>
-    </a>
-    <a class="flex items-end mt-16 -mr-16" href="works#icantsee">
-        <img class="w-3/8" src="images/expo/WaldvorlauterBaume_04-web.jpg" />
-        <p class="flex-1 pr-8 pb-1 ml-4 border-b border-beige">
-            I can't see the wood for the trees anymore
-        </p>
-        <time class="-mb-1 w-8 text-right text-l text-red font-ocr-t">2021</time>
-    </a>
-    <a class="flex flex-row-reverse items-end mt-16 -ml-16" href="works#pah">
-        <img class="w-3/8" src="images/expo/P.A.H._ImVorbei_Doku02-web.jpg" />
-        <p class="flex-1 pb-1 pl-8 mr-4 border-b border-beige">
-            P.A.H. (Schwedenhilfe)
-        </p>
-        <time class="-mb-1 w-8 text-l text-red font-ocr-t">2019</time>
-    </a>
-    <a class="flex items-end mt-16 -mr-16" href="works#theerased">
-        <img class="w-3/8" src="images/expo/Erasedbrain_02-web.jpg" />
-        <p class="flex-1 pr-8 pb-1 ml-4 border-b border-beige">The Erased Brain, Just the Apparatus</p>
-        <time class="-mb-1 w-8 text-right text-l text-red font-ocr-t">2019</time>
-    </a>
-    <a
-        class="flex flex-row-reverse items-end mt-16 -ml-16"
-        href="works#revolvere"
+        Ahuehuete
+        <br />
+        [The Ancient Water Tree]
+    </Teaser>
+    <Teaser
+        href="works#icantsee"
+        imgSrc="/images/expo/WaldvorlauterBaume_04-web.jpg"
+        year={2021}
     >
-        <img class="w-3/8" src="images/expo/revolvere_doku_01-web.jpg" />
-        <p class="flex-1 pb-1 pl-8 mr-4 border-b border-beige">revolvere</p>
-        <time class="-mb-1 w-8 text-l text-red font-ocr-t">2018</time>
-    </a>
-    <a class="flex items-end mt-16 -mr-16" href="work#redgreenbirth">
-        <img
-            class="w-3/8"
-            src="images/stills/RotGrünGeburt_Filmstill1-web.jpg"
-        />
-        <p class="flex-1 pr-8 pb-1 ml-4 border-b border-beige">Red Green Birth</p>
-        <time class="-mb-1 w-8 text-right text-l text-red font-ocr-t">2018</time>
-    </a>
-    <a
-        class="flex flex-row-reverse items-end mt-16 -ml-16"
-        href="dondevivoyo#dondevivoyo"
+        I can't see the wood for the trees anymore
+    </Teaser>
+    <Teaser
+        href="works#pah"
+        imgSrc="/images/expo/P.A.H._ImVorbei_Doku02-web.jpg"
+        year={2019}
+        rtl
     >
-        <img class="w-1/2" src="images/books/DVY_Repro_01.jpg" />
-        <p class="flex-1 pb-1 pl-8 mr-4 border-b border-beige">
-            Donde Vivo Yo
-            [Where I live]
-        </p>
-        <time class="-mb-1 w-8 text-l text-red font-ocr-t">2017</time>
-    </a>
-    <a class="flex items-end mt-16 -mr-16" href="works#ttttouchme">
-        <img
-            class="w-5/8"
-            src="images/stills/t-t-t-touch-me_filmstill1_low.jpg"
-        />
-        <p class="flex-1 pr-8 pb-1 ml-4 border-b border-beige">t t t touch me</p>
-        <time class="-mb-1 w-8 text-right text-l text-red font-ocr-t">2017</time>
-    </a>
-    <a class="flex flex-row-reverse items-end mt-16 -ml-16" href="works#a1224">
-        <img class="w-1/2" src="images/stills/12-24_01-web_low.jpg" />
-        <p class="flex-1 pb-1 pl-8 mr-4 border-b border-beige">12 24</p>
-        <time class="-mb-1 w-8 text-l text-red font-ocr-t">2017</time>
-    </a>
-    <a class="flex items-end mt-16 -mr-16" href="works#venive">
-        <img class="w-1/2" src="images/stills/VenìVe_Videostill4-web_low.jpg" />
-        <p class="flex-1 pr-8 pb-1 ml-4 border-b border-beige">¡Vení Ve!</p>
-        <time class="-mb-1 w-8 text-right text-l text-red font-ocr-t">2016</time>
-    </a>
-    <a
-        class="flex flex-row-reverse items-end mt-16 -ml-16"
+        P.A.H. (Schwedenhilfe)
+    </Teaser>
+    <Teaser
+        href="/works#theerased"
+        imgSrc="/images/expo/Erasedbrain_02-web.jpg"
+        year={2019}
+    >
+        The Erased Brain, Just the Apparatus
+    </Teaser>
+    <Teaser
+        href="/works#revolvere"
+        imgSrc="/images/expo/revolvere_doku_01-web.jpg"
+        year={2018}
+        rtl
+    >
+        revolvere
+    </Teaser>
+    <Teaser
+        href="/work#redgreenbirth"
+        imgSrc="/images/stills/RotGrünGeburt_Filmstill1-web.jpg"
+        year={2018}
+    >
+        Red Green Birth
+    </Teaser>
+    <Teaser
+        href="collaborations#dondevivoyo"
+        imgSrc="/images/books/DVY_Repro_01.jpg"
+        imgWidth={50}
+        year={2017}
+        rtl
+    >
+        Donde Vivo Yo [Where I live]
+    </Teaser>
+    <Teaser
+        href="works#ttttouchme"
+        imgSrc="/images/stills/t-t-t-touch-me_filmstill1_low.jpg"
+        imgWidth={500 / 8}
+        year={2017}
+    >
+        t t t touch me
+    </Teaser>
+    <Teaser
+        href="works#a1224"
+        imgSrc="/images/stills/12-24_01-web_low.jpg"
+        imgWidth={50}
+        year={2017}
+        rtl
+    >
+        12 24
+    </Teaser>
+    <Teaser
+        href="works#venive"
+        imgSrc="/images/stills/VenìVe_Videostill4-web_low.jpg"
+        imgWidth={50}
+        year={2016}
+    >
+        ¡Vení Ve!
+    </Teaser>
+    <Teaser
         href="publications#thirdgen"
+        imgSrc="/images/books/3rdG_Repro_01.jpg"
+        year={2014}
+        rtl
     >
-        <img class="w-3/8" src="images/books/3rdG_Repro_01.jpg" />
-        <p class="flex-1 pb-1 pl-8 mr-4 border-b border-beige">3rd Generation</p>
-        <time class="-mb-1 w-8 text-l text-red font-ocr-t">2014</time>
-    </a>
+        3rd Generation
+    </Teaser>
 </Layout>

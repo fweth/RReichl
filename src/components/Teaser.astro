@@ -1,0 +1,32 @@
+---
+const {
+    href,
+    imgSrc,
+    imgAlt = "",
+    imgWidth = 300 / 8,
+    year,
+    rtl = false,
+} = Astro.props;
+---
+
+{
+    rtl ? (
+        <a class="flex flex-row-reverse items-end mt-16 lg:-ml-16" href={href}>
+            <img src={imgSrc} alt={imgAlt} style={{ width: `${imgWidth}%` }} />
+            <p class="flex-1 pb-1 pl-8 mr-4 border-b border-beige">
+                <slot />
+            </p>
+            <time class="-mb-1 w-8 text-l text-red font-ocr-t">{year}</time>
+        </a>
+    ) : (
+        <a class="flex items-end mt-16 -mr-16" href={href}>
+            <img src={imgSrc} alt={imgAlt} style={{ width: `${imgWidth}%` }} />
+            <p class="flex-1 pr-8 pb-1 ml-4 border-b border-beige">
+                <slot />
+            </p>
+            <time class="-mb-1 w-8 text-right text-l text-red font-ocr-t">
+                {year}
+            </time>
+        </a>
+    )
+}
