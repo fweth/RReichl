@@ -11,20 +11,20 @@ const {
 
 {
     rtl ? (
-        <a class="flex flex-row-reverse items-end mt-16 lg:-ml-16" href={href}>
+        <a class="flex relative flex-row-reverse items-end mt-16 lg:-ml-16" href={href}>
             <img src={imgSrc} alt={imgAlt} style={{ width: `${imgWidth}%` }} />
-            <p class="flex-1 pb-1 pl-8 mr-4 border-b border-beige">
+            <p class="flex-1 pb-1 mr-4 border-b border-beige lg:pl-8">
                 <slot />
             </p>
-            <time class="-mb-1 w-8 text-l text-red font-ocr-t">{year}</time>
+            <time class="absolute left-0 -bottom-6 -mb-1 w-8 text-l text-red font-ocr-t lg:static">{year}</time>
         </a>
     ) : (
-        <a class="flex items-end mt-16 -mr-16" href={href}>
+        <a class="flex relative items-end mt-16 lg:-mr-16" href={href}>
             <img src={imgSrc} alt={imgAlt} style={{ width: `${imgWidth}%` }} />
-            <p class="flex-1 pr-8 pb-1 ml-4 border-b border-beige">
+            <p class="flex-1 pb-1 ml-4 border-b border-beige lg:pr-8">
                 <slot />
             </p>
-            <time class="-mb-1 w-8 text-right text-l text-red font-ocr-t">
+            <time class="absolute right-0 -bottom-6 -mb-1 w-8 text-right text-l text-red font-ocr-t lg:static">
                 {year}
             </time>
         </a>
