@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Bilingual from "../components/Bilingual.astro";
+---
+
+<Layout
+    title="Raphael Reichl - Contact"
+    description="Contact to artist Raphael Reichl."
+    sectionNames={[
+        ["contact", "Contact"],
+    ]}
+>
+    <p class="text-l text-red">Raphael Reichl</p>
+    <section id="contact">
+        <Bilingual>
+            <Fragment slot="en">
+                <p class="mt-4">
+                    Spittelauer Lände 15-21/11/25
+                    <br />
+                    1090 Wien
+                <br />
+                    atelier [@] rpreichl.com
+                </p>
+
+                <p class="mt-4">
+                    Responsible for the content: Raphael Reichl
+                <br />
+                    Programming: Klaus Györgyfavay
+                </p>
+                <p class="mt-4 md:w-5/8">
+                    All texts, illustrations, graphics, video sequences, audio documents and 
+                    other materials published on Raphael Reichl's website are subject to 
+                    copyright protection. The copyright holder is either Raphael Reichl or 
+                    the person or institution named in the source reference. Reproduction, 
+                    mass copying or publication of the information contained on the website 
+                    is not permitted. Permission to reprint or redistribute may be granted in 
+                    individual cases.
+                </p>
+                <p class="mt-4">© Raphael Reichl, 2022. All rights reserved.</p>
+            </Fragment>
+            <Fragment slot="de">
+                <p class="mt-4">
+                    Spittelauer Lände 15-21/11/25
+                    <br />
+                    1090 Wien
+                <br />
+                    atelier [@] rpreichl.com
+                </p>
+
+                <p class="mt-4">
+                    Für den Inhalt verantwortlich: Raphael Reichl
+                <br />
+                    Programmierung: Klaus Györgyfavay
+                </p>
+                <p class="mt-4 md:w-5/8">
+                    Sämtliche auf der Website von Raphael Reichl veröffentlichten
+                    Texte, Abbildungen, Grafiken, Videosequenzen, Tondokumente und
+                    andere Materialien unterliegen dem Schutz des Urheberrechts.
+                    Urheber ist entweder Raphael Reichl oder die in der
+                    Quellenangabe genannte Person oder Institution. Eine Wiedergabe,
+                    Massenvervielfältigung oder Veröffentlichung der auf der Website
+                    befindlichen Informationen ist nicht gestattet. Die Genehmigung
+                    zum Abdruck oder zur Weiterverbreitung kann im Einzelfall
+                    erteilt werden.
+                </p>
+                <p class="mt-4">© Raphael Reichl, 2022. Alle Rechte vorbehalten.</p>
+            </Fragment>    
+        </Bilingual>
+    </section>
+</Layout>
