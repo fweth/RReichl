@@ -19,16 +19,16 @@ const {
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     </head>
     <body>
-        <Header sectionNames={sectionNames} />
+        <Header sectionNames={sectionNames} lang={lang} />
         <main class="mx-5 mt-24 mb-64 max-w-5xl lg:mx-20 lg:w-1/2 lg:ml-96 xl:ml-128">
             {
                 lang && (
-                    <div class="fixed right-5 top-16 z-10 text-right lg:-mb-4 lg:-mr-12 lg:top-24 lg:sticky lg:top-4 font-ocr-t text-l text-red">
-                        <button id="btn-lang-en" class="underline" disabled>
+                    <div class="hidden fixed right-5 top-16 z-10 text-right lg:block lg:-mb-4 lg:-mr-12 lg:top-24 lg:sticky lg:top-4 font-ocr-t text-l text-red">
+                        <button class="underline btn-lang-en" disabled>
                             en
                         </button>
                         &nbsp;/&nbsp;
-                        <button id="btn-lang-de">de</button>
+                        <button class="btn-lang-de">de</button>
                     </div>
                 )
             }

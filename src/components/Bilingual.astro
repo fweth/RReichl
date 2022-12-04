@@ -1,27 +1,43 @@
 <script>
-    const btns = ["en", "de"].map((cc) =>
-        document.querySelector(`#btn-lang-${cc}`) as HTMLButtonElement
+    const btns = ["en", "de"].map(
+        (cc) =>
+            document.querySelectorAll(
+                `.btn-lang-${cc}`
+            ) as NodeListOf<HTMLButtonElement>
     );
     const content = ["en", "de"].map((cc) =>
         document.querySelectorAll(`[data-lang="${cc}"]`)
     );
-    [0,1].forEach(function(i){
-        btns[i].onclick=function(){
-            btns[1-i].removeAttribute("disabled");
-            btns[1-i].classList.remove("underline");
-            btns[i].setAttribute("disabled", "");
-            btns[i].classList.add("underline");
-            content[1-i].forEach(function(div){
-                div.classList.add("opacity-0");
-            })
-            content[i].forEach(function(div){
-                div.classList.remove("opacity-0");
-            })
-        }
-    })
+    function update(lang: number) {
+        console.log(lang, btns);
+        btns[1 - lang].forEach(function (btn) {
+            btn.classList.remove("underline");
+            btn.removeAttribute("disabled");
+        });
+        btns[lang].forEach(function (btn) {
+            btn.classList.add("underline");
+            btn.setAttribute("disabled", "");
+        });
+        content[1 - lang].forEach(function (div) {
+            div.classList.add("opacity-0");
+        });
+        content[lang].forEach(function (div) {
+            div.classList.remove("opacity-0");
+        });
+    }
+    [0, 1].forEach(function (i) {
+        btns[i].forEach(function (btn) {
+            btn.onclick = function () {
+                update(i);
+            };
+        });
+    });
 </script>
 <div class="grid">
-    <div class="col-start-1 row-start-1 self-end transition-opacity" data-lang="en">
+    <div
+        class="col-start-1 row-start-1 self-end transition-opacity"
+        data-lang="en"
+    >
         <slot name="en" />
     </div>
     <div
