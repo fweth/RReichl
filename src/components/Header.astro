@@ -53,14 +53,14 @@ const location = path.length ? path : "index";
     }
     (window.onscroll = scrollHandler)();
 </script>
-<header class="pt-4 fixed top-0 w-screen bg-white fixed transition-transform z-10 translate-y-[calc(96px-100%)] lg:translate-y-0 lg:bg-transparent lg:w-96">
+<header class="pt-4 fixed top-0 w-screen bg-white transition-transform z-10 translate-y-[calc(96px-100%)] lg:translate-y-0 lg:bg-transparent lg:w-96">
     {
         lang && (
             <div class="absolute bottom-2 right-5 z-10 text-xl text-right lg:hidden lg:-mb-4 lg:-mr-12 font-ocr-t text-red">
                 <button class="underline btn-lang-en" disabled>
                     en
                 </button>
-                &nbsp;/&nbsp;
+                &nbsp;&nbsp;/&nbsp;&nbsp;
                 <button class="btn-lang-de">de</button>
             </div>
         )

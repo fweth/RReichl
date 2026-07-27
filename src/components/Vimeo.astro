@@ -2,11 +2,10 @@
 const { id } = Astro.props;
 ---
 
-<div class="relative pb-[75%] h-0 overflow-hidden">
-    <iframe
-        class="absolute w-full h-full"
-        src={`https://player.vimeo.com/video/${id}`}
-        frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowfullscreen></iframe>
+<div class="relative h-0 overflow-hidden pb-[75%]">
+  <iframe
+    class="absolute h-full w-full"
+    src={`https://player.vimeo.com/video/${id}`}
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen></iframe>
 </div>

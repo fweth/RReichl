@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "ChaparralPro";
+  src: url("/fonts/ChaparralPro-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "ChaparralPro";
+  src: url("/fonts/ChaparralPro-Bold.otf") format("opentype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "ChaparralPro";
+  src: url("/fonts/ChaparralPro-LightItalic.otf") format("opentype");
+  font-style: italic;
+}
+@font-face {
+  font-family: "OcrT";
+  src: url("/fonts/OcrT.otf") format("opentype");
+}
+
+@theme {
+  --font-chaparral: "ChaparralPro";
+  --font-ocr-t: "OcrT";
+
+  --color-beige: #66614e;
+  --color-black: #000;
+  --color-red: #b75450;
+  --color-transparent: #0000;
+  --color-white: #fff;
+
+  --text-m: 14px;
+  --text-l: 15px;
+  --text-xl: 18px;
+
+  --spacing: 4px;
+  --spacing-1/8: 12.5%;
+  --spacing-1/4: 25%;
+  --spacing-3/8: 37.5%;
+  --spacing-1/2: 50%;
+  --spacing-5/8: 62.5%;
+  --spacing-3/4: 75%;
+  --spacing-7/8: 87.5%;
+}
+
+@layer base {
+  body {
+    font-family: "ChaparralPro";
+    font-size: 13px;
+  }
+  a {
+    display: block;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Raphael Reichl",
+  "context": "dist",
+  "host": "server227.campusspeicher.de",
+  "protocol": "ftp",
+  "secure": true,
+  "username": "ftp-269077",
+  "remotePath": "/rpreichl.com",
+  "password": "YOUR_PASSWORD_HERE",
+  "uploadOnSave": false,
+  "watcher": {
+    "files": "**/*",
+    "autoUpload": true,
+    "autoDelete": true
+  }
+}
