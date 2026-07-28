@@ -8,6 +8,7 @@ import Link from "../components/Link.astro";
   title="Raphael Reichl — Editorial"
   description="editorial design by Raphael Reichl."
   sectionNames={[
+    ["fdgda", "For the Happiness of Others"],
     ["cocina", "Talentos de la Cocina Mexicana"],
     ["almendrado", "Almendrado y Tierra Roja"],
     ["andar", "Essay: Andar pisando en cascarones arenosos"],
@@ -19,6 +20,84 @@ import Link from "../components/Link.astro";
     ["thirdgen", "3rd Generation"],
   ]}
 >
+<section class="mt-16" id="fdgda">
+    <Bilingual>
+      <Fragment slot="en">
+        <h2 class="text-red text-xl font-bold">For the Happiness of Others</h2>
+        <p class="text-red mt-4">
+          Booklet series, each 12 pages, prototypes.
+          <br />
+          Softcover, staple binding, 8 &times; 20 cm
+          <br />
+          2024
+        </p>
+        <p class="text-red mt-4 italic">Authors</p>
+        <p class="text-l text-red">Moritz Ellmann, Raphael Reichl</p>
+        <p class="text-red mt-2 italic">Photography</p>
+        <p class="text-l text-red">Moritz Ellmann, Raphael Reichl</p>
+        <p class="text-red mt-2 italic">Graphic Design</p>
+        <p class="text-l text-red">Raphael Reichl</p>
+        <p class="text-m mt-4 indent-4 xl:w-5/8">
+        For the Happiness of Others (work in progress) follows the diverse realities 
+        of refugees’ lives over a period of four years, raising questions about 
+        injustice within our global society. As part of the exhibition DAY LABORER 
+        at FLUCC Vienna, a series of accompanying booklets was developed as an extension 
+        of a short excerpt from the documentary material. Each volume reconstructs 
+        the story of one protagonist through transcribed telephone conversations 
+        collected during our research. The publications offer intimate insights 
+        into the challenges of seeking asylum in Austria.
+        </p>
+         <Link class="text-beige mt-4" href="https://flucc.at/events/3hJTmE-in-der-kubatur-des-kabinetts-craft/">
+          Exhibition DAY LABORER, FLUCC Vienna
+        </Link>
+        <p class="text-red border-beige mt-4 border-b italic">
+          Photos by Digitale Fotowerkstatt, University of Applied Arts Vienna
+        </p>
+      </Fragment>
+      <Fragment slot="de">
+        <h2 class="text-red text-xl font-bold">Für das Glück der Anderen</h2>
+        <p class="text-red mt-4">
+          Broschüren Serie, jeweils 12 Seiten, Prototypen.
+          <br />
+          Softcover, Klammerheftung, 8 &times; 20 cm
+          <br />
+          2024
+        </p>
+        <p class="text-red mt-4 italic">Autoren</p>
+        <p class="text-l text-red">Moritz Ellmann, Raphael Reichl</p>
+        <p class="text-red mt-2 italic">Fotografie</p>
+        <p class="text-l text-red">Moritz Ellmann, Raphael Reichl</p>
+        <p class="text-red mt-2 italic">Grafik Design</p>
+        <p class="text-l text-red">Raphael Reichl</p>
+        <p class="text-m mt-4 indent-4 xl:w-5/8">
+          Für das Glück der Anderen (in Arbeit) begleitet über einen Zeitraum 
+          von vier Jahren die unterschiedlichen Lebensrealitäten geflüchteter Menschen 
+          und stellt Fragen nach den Ungerechtigkeiten unserer globalen Gesellschaft. 
+          Im Rahmen der Ausstellung DAY LABORER im FLUCC Wien entstand eine Serie 
+          begleitender Hefte als Erweiterung eines kurzen Ausschnitts des dokumentarischen 
+          Materials. Jeder Band rekonstruiert die Geschichte einer der Protagonist*innen 
+          anhand transkribierter Telefongespräche, die wir im Laufe unserer Recherche 
+          aufgezeichnet haben. Die Publikationen eröffnen intime Einblicke in die 
+          Herausforderungen des Asylverfahrens in Österreich.
+        </p>
+         <Link class="text-beige mt-4" href="https://flucc.at/events/3hJTmE-in-der-kubatur-des-kabinetts-craft/">
+          Ausstellung DAY LABORER, FLUCC Vienna
+        </Link>
+        <p class="text-red border-beige mt-4 border-b italic">
+          Fotos von Digitale Fotowerkstatt, Universität für angewandte Kunst,
+          Wien
+        </p>
+      </Fragment>
+    </Bilingual>
+  </section>
+  <div class="mt-4 grid grid-cols-2 gap-4">
+    <img class="col-span-2" src="/images/books/Almendrado_Book-Docu_01-lowres.jpg"/>
+    <img class="col-span-2" src="/images/books/Almendrado_Book-Docu_03-lowres.jpg"/>
+    <img class="col-span-2 md:col-span-1" src="/images/books/Almendrado_Book-Docu_02-lowres.jpg"/>
+    <img class="col-span-2 md:col-span-1" src="/images/books/Almendrado_Book-Docu_05-lowres.jpg"/>
+    <img class="col-span-2 md:col-span-1" src="/images/books/Almendrado_Book-Docu_06-lowres.jpg"/>
+    <img class="col-span-2 md:col-span-1" src="/images/books/Almendrado_Book-Docu_04-lowres.jpg"/>
+  </div>
 <section class="mt-16" id="cocina">
     <Bilingual>
       <Fragment slot="en">
@@ -61,7 +140,7 @@ import Link from "../components/Link.astro";
           <br />
           Hardcover, Fadenbindung, 21 &times; 28.3 cm
           <br />
-          2023
+          2024
         </p>
         <p class="text-red mt-4 italic">Rezepte von Carlos Gaytán</p>
         <p class="text-l text-red">Grupo Somos</p>
