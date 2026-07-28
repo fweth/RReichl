@@ -9,7 +9,7 @@
   "password": "YOUR_PASSWORD_HERE",
   "uploadOnSave": false,
   "watcher": {
-    "files": "**/*",
+    "files": "**/*.{html,css,js}",
     "autoUpload": true,
     "autoDelete": true
   }
