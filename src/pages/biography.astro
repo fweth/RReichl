@@ -6,12 +6,6 @@ import Bilingual from "../components/Bilingual.astro";
 <Layout
   title="Raphael Reichl"
   description="Personal website of artist Raphael Reichl, based in Vienna / Mexico City."
-  sectionNames={[
-    ["intro", "Introductoin"],
-    ["education", "Education"],
-    ["prices", "Prices & Residencies"],
-    ["exhibitions", "Exhibitions"],
-  ]}
 >
   <div class="mt-4 grid grid-cols-3 gap-4">
     <img
@@ -19,11 +13,8 @@ import Bilingual from "../components/Bilingual.astro";
       src="/images/generell/Reichl_Portrait_web.jpg"
     />
   </div>
-  <br />
-  <br />
-  <br />
   <p class="text-red text-xl font-bold">Raphael Reichl</p>
-  <section id="intro">
+  <section>
     <Bilingual>
       <Fragment slot="en">
         <p class="text-l text-red mt-4 xl:w-5/8">
@@ -60,7 +51,7 @@ import Bilingual from "../components/Bilingual.astro";
       </Fragment>
     </Bilingual>
   </section>
-  <section class="text-beige mt-16" id="education">
+  <section class="text-beige mt-8">
     <Bilingual>
       <Fragment slot="en">
         <h2 class="text-xl font-bold">Education</h2>
@@ -122,7 +113,7 @@ import Bilingual from "../components/Bilingual.astro";
       </Fragment>
     </Bilingual>
   </section>
-  <section class="text-beige mt-8" id="prices">
+  <section class="text-beige mt-8">
     <Bilingual>
       <Fragment slot="en">
         <h2 class="text-xl font-bold">Awards, Scholarships and Residencies</h2>
@@ -180,64 +171,64 @@ import Bilingual from "../components/Bilingual.astro";
         <div class="mt-4 grid grid-cols-[32px_1fr] gap-2">
           <time>2025</time>
           <p>
-            Stipendium für die Sommerakademie Salzburg (AT)
+          Stipendium für die Sommerakademie Salzburg (AT)
           </p>
           <time>2024</time>
           <p>
-          „Special Prize“ Publikumspreis, Mittelamerikanisches Filmfestival Wien (AT)
+          Publikumspreis, Mittelamerikanisches Filmfestival Wien (AT)
           <br />
-          „Bester Dokumentarfilm“ Jurypreis, Las Cruces International Film Festival (US)
+          <i>Bester Dokumentarfilm</i> Jurypreis, Las Cruces International Film Festival (US)
           <br />
-          „Environmental and Social Justice“ Jurypreis, Latino & Native American Film Festival (US)
+          <i>Environmental and Social Justice Award</i> Jurypreis, Latino & Native American Film Festival (US)
           </p>
           <time>2023</time>
           <p>
-          „Bester Dokumentarfilm“ Special Contest Award, Capri Hollywood (IT)
+          <i>Bester Dokumentarfilm</i> Special Contest Award, Capri Hollywood (IT)
           <br />
           Post-Graduation Arbeitsstipendium, Bundesministerium für Bildung, Wissenschaft und Forschung (AT)
           </p>
           <time>2022</time>
           <p>
-            Preisträger des Kunsthallenpreises, Wien
+          Preisträger des Kunsthallenpreises, Wien
           </p>
           <time>2021</time>
           <p>
-            Auslandsstipendium, Auslandspraktikum in Mexiko, Angewandte Wien
+          Auslandsstipendium, Auslandspraktikum in Mexiko, Angewandte Wien
           </p>
           <time>2019</time>
           <p>
-            Preisträger, 20 Seconds of Art, KÖR (AT)</p>
+          Preisträger, 20 Seconds of Art, KÖR (AT)</p>
           <time>2014</time>
           <p>
-            Rookie of the Year, CCA-Award (AT)
-            <br />
-            2. Platz, Dummy Award, Self Publish Riga (LV)
-            <br />
-            2. Platz, Dummy Award, Fotobookfestival Kassel (DE)
+          Rookie of the Year, CCA-Award (AT)
+          <br />
+          2. Platz, Dummy Award, Self Publish Riga (LV)
+          <br />
+          2. Platz, Dummy Award, Fotobookfestival Kassel (DE)
           </p>
           <time>2013</time>
           <p>
-            1. Platz, Jugendinnovativ, WKO (AT)
-            <br />
-            Lobende Erwähnung, Schönste Bücher Österreichs, BMKOES (AT)
+          1. Platz, Jugendinnovativ, WKO (AT)
+          <br />
+          Lobende Erwähnung, Schönste Bücher Österreichs, BMKOES (AT)
           </p>
         </div>
       </Fragment>
     </Bilingual>
   </section>
-  <section class="text-beige mt-8" id="exhibitions">
+  <section class="text-beige mt-8">
     <Bilingual>
       <Fragment slot="en">
         <h2 class="text-xl font-bold">
           Exhibitions and Film Festivals 
           <span class="font-normal">
-          (Extracts)
+          <br />(Extracts)
           </span>
         </h2>
         <div class="mt-4 grid grid-cols-[32px_1fr] gap-4">
           <time>2025</time>
           <p>
-            GEGENWÄRTIG, DA, Kunstraum Weikendorf, Public Art Lower Austria (AT)
+            <b>Gegenwärtig, Da</b>, Kunstraum Weikendorf, Public Art Lower Austria (AT)
             <br />
             <i>La Escondida</i>, Cinema Planeta, Cuernavaca (MX)
             <br />
@@ -245,11 +236,11 @@ import Bilingual from "../components/Bilingual.astro";
             <br />
             <i>Paradise Inside</i>, Shortynale, Klosterneuburg (AT)
             <br />
-            <i>Hasta una profundidad suficiente para alcanzar lo que se busca</i>, Espacio Unión, Mexico City (MX)
+            <b>Hasta una profundidad suficiente para alcanzar lo que se busca</b>, Espacio Unión, Mexico City (MX)
           </p>
           <time>2024</time>
           <p>
-            DAY LABORER, In der Kubatur des Kabinetts, Flucc Vienna (AT)
+            <b>Day Laborer</b>, In der Kubatur des Kabinetts, Flucc Vienna (AT)
             <br />
             <i>t t t touch me</i>, Screening / The World in My Hand, Alexander Tutsek Stiftung, Munich (DE)
             <br />
@@ -275,7 +266,7 @@ import Bilingual from "../components/Bilingual.astro";
           </p>
           <time>2022</time>
           <p>
-            OE1 Talentscholarship Exhibition, Acting in the now, Leopold Museum, Vienna (AT)
+            <b>Acting in the now</b>, Leopold Museum, Vienna (AT)
             <br />
             <i>12 24</i>, DRKROOM & FRIENDS, 23. Dresdner Schmalfilmtage, Dresden (DE)
             <br />
@@ -326,12 +317,15 @@ import Bilingual from "../components/Bilingual.astro";
       <Fragment slot="de">
         <h2 class="text-xl font-bold">
           Ausstellungen und Filmfestivals
-          <span class="font-normal">Auswahl</span>
+          <span class="font-normal">
+          <br />
+          (Auswahl)
+        </span>
         </h2>
         <div class="mt-4 grid grid-cols-[32px_1fr] gap-4">
          <time>2025</time>
           <p>
-            Gegenwärtig, da, Kunstraum Weikendorf, KÖR Niederösterreich (AT)
+            <b>Gegenwärtig, da</b>, Kunstraum Weikendorf, KÖR Niederösterreich (AT)
             <br />
             <i>La Escondida</i>, Cinema Planeta, Cuernavaca (MX)
             <br />
@@ -339,11 +333,11 @@ import Bilingual from "../components/Bilingual.astro";
             <br />
             <i>Paradise Inside</i>, Shortynale, Klosterneuburg (AT)
             <br />
-            <i>Hasta una profundidad suficiente para alcanzar lo que se busca</i>, Espacio Unión, Mexico Stadt (MX)
+            <b>Hasta una profundidad suficiente para alcanzar lo que se busca</b>, Espacio Unión, Mexico Stadt (MX)
           </p>
           <time>2024</time>
           <p>
-            DAY LABORER, In der Kubatur des Kabinetts, Flucc Wien (AT)
+            <b>Day Laborer</b>, In der Kubatur des Kabinetts, Flucc Wien (AT)
             <br />
             <i>t t t touch me</i>, Screening / The World in My Hand, Alexander Tutsek Stiftung, München (DE)
             <br />
@@ -369,7 +363,7 @@ import Bilingual from "../components/Bilingual.astro";
           </p>
           <time>2022</time>
           <p>
-          Acting in the now, Leopold Museum, Wien (AT)
+          <b>Handeln Im Jetzt</b>, Leopold Museum, Wien (AT)
           <br />
           <i>12 24</i>, DRKROOM & FRIENDS, 23. Dresdner Schmalfilmtage, Dresden (DE)
           <br />
