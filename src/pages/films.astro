@@ -71,6 +71,8 @@ import Vimeo from "../components/Vimeo.astro";
             src="/images/stills/ParadiseInside_Still_1.jpg"
           />
         </div>
+        <p class="relative h-0 overflow-hidden pb-[75%]">
+      </p>
         <p class="text-red mt-2 italic">Regie, Drehbuch und Produktion</p>
         <p class="text-l text-red">Raphael Reichl</p>
         <p class="text-red mt-2 italic">Kamera</p>
@@ -115,6 +117,13 @@ import Vimeo from "../components/Vimeo.astro";
         src="/images/stills/ParadiseInside_Still_5.jpg"
       />
     </div>
+      <iframe
+        class="absolute h-full w-full"
+        src="https://vimeo.com/913419484"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
   </section>
 
   <section class="mt-24" id="laescondida">
@@ -143,19 +152,15 @@ import Vimeo from "../components/Vimeo.astro";
           2023, Österreich / Mexiko
         </p>
       </div>
-      <p class="relative h-0 overflow-hidden pb-[75%]">
-        <iframe
-          class="absolute h-full w-full"
-          src="https://player.vimeo.com/video/846446067"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen></iframe>
-      </p>
+      <div class="mt-8 grid grid-cols-2 gap-4">
+          <img
+            class="col-span-2"
+            src="/images/stills/LaEscondida_Still_09.jpg"/>
+      </div>
       <div class="grid">
         <div
           class="col-start-1 row-start-1 self-end transition-opacity"
-          data-lang="en"
-        >
+          data-lang="en">
           <p class="text-red mt-2 italic">Written, directed and produced by</p>
           <p class="text-l text-red">Raphael Reichl</p>
           <p class="text-red mt-2 italic">Music composed by</p>
@@ -211,8 +216,7 @@ import Vimeo from "../components/Vimeo.astro";
         </div>
         <div
           class="col-start-1 row-start-1 self-end opacity-0 transition-opacity"
-          data-lang="de"
-        >
+          data-lang="de">
           <p class="text-red mt-2 italic">Regie, Drehbuch und Produktion</p>
           <p class="text-l text-red">Raphael Reichl</p>
           <p class="text-red mt-2 italic">Musikkomponist</p>
@@ -288,6 +292,14 @@ import Vimeo from "../components/Vimeo.astro";
         />
       </div>
     </div>
+          <p class="relative h-0 overflow-hidden pb-[75%]">
+        <iframe
+          class="absolute h-full w-full"
+          src="https://vimeo.com/user70837721/laescondida"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen></iframe>
+      </p>
   </section>
   <section class="mt-16" id="ahuehuete">
     <Bilingual>
