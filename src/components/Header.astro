@@ -1,6 +1,6 @@
 ---
 const { sectionNames = [], lang } = Astro.props;
-const path = Astro.url.pathname.replace("/", "").replace("-", " ");
+const path = Astro.url.pathname.replaceAll("/", "").replaceAll("-", " ");
 const location = path.length ? path : "index";
 ---
 
