@@ -1,19 +1,28 @@
 ---
-import Header from "../components/Header.astro";
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import Header from "./header.astro";
+import LangSwitcher from "./lang-switcher.astro";
 import "../styles/global.css";
 const {
   title = "Raphael Reichl",
   description = "Artist and filmmaker Raphael Reichl, based in Vienna / Mexico City.",
-  lang = true,
+  lang,
   sectionNames,
 } = Astro.props;
+
+const base = Astro.url.pathname.replace(/^\/de/, "");
+
+const paths = {
+  de: getRelativeLocaleUrl("de", base),
+  en: getRelativeLocaleUrl("en", base),
+};
 ---
 
 <!doctype html>
-<html class="scroll-pt-24 scroll-smooth lg:scroll-pt-0" lang="en">
+<html class="scroll-pt-24 scroll-smooth lg:scroll-pt-0" lang={lang || "en"}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <meta name="view-transition" content="same-origin" />
@@ -21,21 +30,15 @@ const {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
-    <Header sectionNames={sectionNames} lang={lang} />
+    <Header sectionNames={sectionNames} lang={lang} paths={paths} />
     <main
       class="mx-5 mt-36 mb-64 max-w-5xl lg:mx-20 lg:ml-96 lg:w-1/2 xl:ml-128"
     >
-      {
-        lang && (
-          <div class="font-ocr-t text-l text-red fixed top-16 right-5 z-10 hidden text-right lg:sticky lg:top-4 lg:top-24 lg:-mr-12 lg:-mb-4 lg:block">
-            <button class="btn-lang-en underline" disabled>
-              en
-            </button>
-            &nbsp;&nbsp;/&nbsp;&nbsp;
-            <button class="btn-lang-de">de</button>
-          </div>
-        )
-      }
+      <div
+        class="font-ocr-t text-l text-red fixed top-16 right-5 z-10 hidden text-right lg:sticky lg:top-24 lg:-mr-12 lg:-mb-4 lg:block"
+      >
+        <LangSwitcher lang={lang} paths={paths} />
+      </div>
       <slot />
     </main>
     <footer

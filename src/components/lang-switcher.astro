@@ -1,0 +1,15 @@
+---
+const { lang, paths } = Astro.props;
+---
+
+<div>
+  <a
+    class={lang ? "" : "pointer-events-none cursor-default underline"}
+    href={paths.en}>en</a
+  >
+  &nbsp;&nbsp;/&nbsp;&nbsp;
+  <a
+    class={lang ? "pointer-events-none cursor-default underline" : ""}
+    href={paths.de}>de</a
+  >
+</div>

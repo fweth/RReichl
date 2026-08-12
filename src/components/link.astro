@@ -1,0 +1,28 @@
+---
+// @ts-nocheck
+import { getRelativeLocaleUrl } from "astro:i18n";
+let { class: className, href, external } = Astro.props;
+
+if (!external && Astro.url.pathname.startsWith("/de")) {
+  href = "/de" + href;
+}
+---
+
+<a
+  class={className}
+  href={href}
+  {...external && { target: "_blank", rel: "noopener noreferrer" }}
+>
+  <slot />
+  {
+    external && (
+      <svg class="ml-1 inline-block h-2" viewBox="0 0 10 10">
+        <g stroke="currentColor" stroke-linecap="round">
+          <line x1="1" y1="9" x2="8" y2="2" />
+          <line x1="2" y1="1" x2="8" y2="2" />
+          <line x1="9" y1="8" x2="8" y2="2" />
+        </g>
+      </svg>
+    )
+  }
+</a>

@@ -1,0 +1,258 @@
+---
+import Layout from "../../components/layout.astro";
+import Link from "../../components/link.astro";
+import Vimeo from "../../components/vimeo.astro";
+
+const lang = Astro.params.lang;
+
+export const getStaticPaths = () => [
+  { params: { lang: "" } },
+  { params: { lang: "de" } },
+];
+---
+
+<Layout
+  title="collaborations"
+  description="These are my collaborations"
+  lang={lang}
+  sectionNames={[
+    ["istmo", "Istmo, a narrowing of land"],
+    ["dondevivoyo", "Donde Vivo Yo"],
+    ["veroircallar", "Ver, Oír Y Callar"],
+  ]}
+>
+  <section class="pt-8" id="istmo">
+    {
+      lang === "de" ? (
+        <>
+          <h2 class="text-l text-red font-bold">Istmo, a narrowing of land</h2>
+          <p class="text-red">
+            Video, Farbe, Ton, 23 min
+            <br />
+            2022, Mexiko
+          </p>
+          <p class="text-red mt-4 italic">Regie, Kamera und Schnitt</p>
+          <p class="text-l text-red">Mara Chavez</p>
+          <p class="text-red mt-2 italic">Kamera und Kameraassistenz</p>
+          <p class="text-l text-red">Raphael Reichl</p>
+          <p class="text-m mt-4 indent-4 xl:w-5/8">
+            Zwischen dem Pazifischen Ozean und dem Golf von Mexiko liegt die
+            Landenge von Tehuantepec, Mexikos windigste Region. Es wird
+            größtenteils von Zapoteken und Ikoots bewohnt, die ihren
+            Lebensunterhalt aus Land und Meer beziehen, die sie als heilig und
+            gemeinschaftlich betrachten. In letzter Zeit ist dieser schmale
+            Landstreifen zu einem lukrativen und gefährlichen Schlachtfeld
+            geworden, da ausländische Investitionen in die Region strömen und
+            Tausende von Windturbinen gebaut werden. Dieser Film untersucht die
+            inhärenten Widersprüche, die hinter dem Versprechen von sauberer
+            Energie und Wirtschaftswachstum verborgen sind, und konzentriert
+            sich auf die Reaktion der Menschen vor Ort, die ihr Land und ihre
+            Lebensweise verteidigen.
+          </p>
+        </>
+      ) : (
+        <>
+          <h2 class="text-l text-red font-bold">Istmo, a narrowing of land</h2>
+          <p class="text-red">
+            Video, colour, sound, 23 min
+            <br />
+            2022, Mexico
+          </p>
+          <p class="text-red mt-4 italic">Director, Camera and Editing</p>
+          <p class="text-l text-red">Mara Chavez</p>
+          <p class="text-red mt-2 italic">Camera and camera assistance</p>
+          <p class="text-l text-red">Raphael Reichl</p>
+          <p class="text-m mt-4 indent-4 xl:w-5/8">
+            Isthmus (a narrowing of land) explores the indigenous struggle
+            against a new form of extractive colonialism in the south of Mexico.
+          </p>
+          <p class="text-m indent-4 xl:w-5/8">
+            Between the Pacific Ocean and the Gulf of Mexico lies the Isthmus of
+            Tehuantepec, Latin America's windiest region. It is largely
+            inhabited by Zapotec and Ikoots people who draw their subsistence
+            from the land and sea, which they view as both sacred and communal.
+            Recently, this narrow strip of land has become a lucrative and
+            dangerous battleground, as foreign investment pours into the region
+            and thousands of wind turbines are constructed.
+          </p>
+        </>
+      )
+    }
+    <p class="text-m mt-4 indent-4 xl:w-5/8">
+      Mara Chavez is an Austrian-Mexican filmmaker. Her work combines research
+      and storytelling to create visual narratives which explore the links
+      between ecologies, extraction, memory and migration.
+    </p>
+    <Link class="text-beige mt-4" href="https://marachavez.com" external={true}>
+      Mara Chavez
+    </Link>
+    <p class="text-red border-beige mt-6 border-b italic">Videostill</p>
+    <div class="mt-4 grid grid-cols-2 gap-4">
+      <img
+        class="col-span-2"
+        src="/images/collab/Istmo,-a-narrowing-of-land_still1_web.jpg"
+      />
+    </div>
+  </section>
+  <section class="mt-8 pt-8" id="dondevivoyo">
+    {
+      lang === "de" ? (
+        <>
+          <h2 class="text-l text-red font-bold">Donde vivo yo</h2>
+          <p class="text-l text-red">Lebensrealitäten in Guatemala Stadt</p>
+          <p class="text-red mt-4">
+            Buch, 300 Seiten, 500 Stk. selbstpubliziert, Softcover,
+            Fadenbindung, 18 &times; 24 cm
+            <br />
+            2017
+          </p>
+          <p class="text-red mt-4 italic">Autor*innen</p>
+          <p class="text-l text-red">
+            Evi Kostner, Fabian Kostner, Raphael Reichl
+          </p>
+          <p class="text-red mt-2 italic">Fotografie</p>
+          <p class="text-l text-red">Ingo Kapelari, Raphael Reichl</p>
+          <p class="text-red mt-2 italic">Grafik</p>
+          <p class="text-l text-red">Raphael Reichl</p>
+          <p class="text-m mt-4 indent-4 xl:w-5/8">
+            Donde vivo yo ist ein sozialdokumentarisches und ethnografisches
+            Fotobuchprojekt, welches sich mit den Lebensrealitäten, vor allem
+            von Jugendlichen, aus Guatemala Stadt auseinandersetzt.
+          </p>
+          <p class="text-m indent-4 xl:w-5/8">
+            Es berichtet über politische Missstände, Korruption, Gewalt, Armut,
+            Mut, sozialem Kampf und die menschenrechtliche Situation. Durch die
+            Bilder und deren verbundenen Geschichten, wollen wir den Menschen
+            die Lebensrealitäten junger Guatemaltek:Innen vor Augen führen.
+          </p>
+          <Link class="text-beige mt-4" href="https://amikaro.org/" external={true}>
+            Amikaro
+          </Link>
+          <p class="text-red border-beige mt-6 border-b italic">Cover</p>
+        </>
+      ) : (
+        <>
+          <h2 class="text-l text-red font-bold">Donde vivo yo</h2>
+          <p class="text-l text-red">Realities of life in Guatemala City</p>
+          <p class="text-red mt-4">
+            Book, 300 pages, 500 pcs., self-published, soft&ndash;cover, thread
+            binding, 18 &times; 24 cm
+            <br />
+            2017
+          </p>
+          <p class="text-red mt-4 italic">Authors</p>
+          <p class="text-l text-red">
+            Evi Kostner, Fabian Kostner, Raphael Reichl
+          </p>
+          <p class="text-red mt-2 italic">Photography</p>
+          <p class="text-l text-red">Ingo Kapelari, Raphael Reichl</p>
+          <p class="text-red mt-2 italic">Graphic Design</p>
+          <p class="text-l text-red">Raphael Reichl</p>
+          <p class="text-m mt-4 indent-4 xl:w-5/8">
+            Donde vivo yo is a social documentary and ethnographic photo book
+            project that deals with the realities of life, especially of young
+            people from Guatemala City.
+          </p>
+          <p class="text-m indent-4 xl:w-5/8">
+            It reports on political grievances, corruption, violence, poverty,
+            courage, resistance and the human rights situation. Through the
+            pictures and their related stories, we want to make people aware of
+            the realities of life for young people living in Guatemala.
+          </p>
+          <Link class="text-beige mt-4" href="https://amikaro.org/" external={true}>
+            Amikaro
+          </Link>
+          <p class="text-red border-beige mt-6 border-b italic">Cover</p>
+        </>
+      )
+    }
+    <div class="mt-4 grid grid-cols-2 gap-4">
+      <img class="col-span-2" src="/images/collab/DVY_Repro_01.jpg" />
+    </div>
+  </section>
+  <section class="mt-8 pt-8" id="veroircallar">
+    {
+      lang === "de" ? (
+        <>
+          <h2 class="text-l text-red font-bold">Ver, Oír Y Callar</h2>
+          <p class="text-l text-red">Sehen, Hören & Schweigen</p>
+          <p class="text-red mt-4">
+            Kurzdokumentarfilm
+            <br />
+            Video, 7 min
+            <br />
+            2017, Guatemala
+          </p>
+          <p class="text-red mt-4 italic">Regie</p>
+          <p class="text-l text-red">Fabian Kostner, Raphael Reichl</p>
+          <p class="text-red mt-2 italic">Kamera, Ton</p>
+          <p class="text-l text-red">Raphael Reichl</p>
+          <p class="text-red mt-2 italic">Schnitt</p>
+          <p class="text-l text-red">Raphael Reichl</p>
+          <p class="text-red mt-2 italic">Produktion</p>
+          <p class="text-l text-red">Amikaro</p>
+          <p class="text-m mt-4 indent-4 xl:w-5/8">
+            La Limonada ist eine der ältesten Siedlungen in Guatemala-Stadt.
+            Andere marginale Siedlungen wurden erst später, vor allem nach dem
+            Erdbeben von 1976, gebaut. Wieder andere in den schlimmsten Jahren
+            des Bürgerkrieges. Ab den 1980er-Jahren wuchs die städtische
+            Bevölkerung rasch und ungeplant an. Das Ergebnis war die Entstehung
+            unzähliger armer Siedlungen rund um die Stadt. Don Chepe ist ein{" "}
+            <i>líder comunitario</i> vom Viertel La Limonada.{" "}
+            <i>Líderes comunitarios</i>
+            sind Personen, die in marginalen Vierteln eine besondere
+            Autoritätsposition einnehmen. Er ist vom Leben gekennzeichnet und
+            sichtlich schwer krank.
+          </p>
+          <Link class="text-l text-beige mt-4" href="https://amikaro.org/" external={true}>
+            Amikaro
+          </Link>
+          <p class="text-red border-beige mt-6 border-b italic">
+            Videostill, Kurzdokumentation
+          </p>
+        </>
+      ) : (
+        <>
+          <h2 class="text-l text-red font-bold">Ver, Oír Y Callar</h2>
+          <p class="text-l text-red">See, Hear & Remain Silent</p>
+          <p class="text-red mt-4">
+            Short documentary
+            <br />
+            Video, 7 min
+            <br />
+            2017, Guatemala
+          </p>
+          <p class="text-red mt-4 italic">Directing</p>
+          <p class="text-l text-red">Fabian Kostner, Raphael Reichl</p>
+          <p class="text-red mt-2 italic">Camera, Sound</p>
+          <p class="text-l text-red">Raphael Reichl</p>
+          <p class="text-red mt-2 italic">Editing</p>
+          <p class="text-l text-red">Raphael Reichl</p>
+          <p class="text-red mt-2 italic">Production</p>
+          <p class="text-l text-red">Amikaro</p>
+          <p class="text-m mt-4 indent-4 xl:w-5/8">
+            La Limonada is one of the oldest settlements in Guatemala City.
+            Other marginal settlements were built later, especially after the
+            1976 earthquake. Still others during the worst years of the civil
+            war. From the 1980s onwards, the urban population grew rapidly and
+            unplanned. The result was the creation of countless poor settlements
+            around the city. Don Chepe is a <i>líder comunitario</i> of the
+            neighbourhood La Limonada.
+            <i>Líderes comunitarios</i> are people who hold a special position
+            of authority in marginal neighborhoods. His life marked him and
+            today he is seriously ill. Líderes comunitarios are people who
+            occupy a special position of authority in marginal neighbourhoods.
+            He is marked by life and visibly seriously ill.
+          </p>
+          <Link class="text-beige mt-4" href="https://amikaro.org/" external={true}>
+            Amikaro
+          </Link>
+          <p class="text-red border-beige mt-6 border-b italic">
+            Videostill, Shortdocumentary
+          </p>
+        </>
+      )
+    }
+    <Vimeo id="564217625" />
+  </section>
+</Layout>
