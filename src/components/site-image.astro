@@ -24,6 +24,8 @@ const image = (await loadImage()).default;
     class="opacity-0 transition-opacity duration-500"
     src={image}
     alt={alt}
+    width={1024}
+    layout="constrained"
     onload="this.style.opacity = 1"
     {...props}
   />
