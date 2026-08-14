@@ -1,13 +1,10 @@
 ---
-import Layout from "../../components/layout.astro";
-import Teaser from "../../components/teaser.astro";
+import { getLocale } from "astro-i18n-aut";
 
-const lang = Astro.params.lang;
+import Layout from "@components/layout.astro";
+import Teaser from "@components/teaser.astro";
 
-export const getStaticPaths = () => [
-  { params: { lang: "" } },
-  { params: { lang: "de" } },
-];
+const lang = getLocale(Astro.url);
 ---
 
 <Layout
@@ -18,7 +15,7 @@ export const getStaticPaths = () => [
 >
   <Teaser
     href="/installations/#andar"
-    imgSrc="/images/expo/Cascarones_Reichl_Doku_13-web.jpg"
+    imgSrc="expo/Cascarones_Reichl_Doku_13-web.jpg"
     imgWidth={500 / 8}
     year={2022}
   >
@@ -28,7 +25,7 @@ export const getStaticPaths = () => [
   </Teaser>
   <Teaser
     href="/films/#ahuehuete"
-    imgSrc="/images/stills/Ahuehuete_Still01-web_low.jpg"
+    imgSrc="stills/Ahuehuete_Still01-web_low.jpg"
     imgWidth={50}
     year={2022}
     rtl
@@ -39,14 +36,14 @@ export const getStaticPaths = () => [
   </Teaser>
   <Teaser
     href="/installations/#icantsee"
-    imgSrc="/images/expo/WaldvorlauterBaume_04-web.jpg"
+    imgSrc="expo/WaldvorlauterBaume_04-web.jpg"
     year={2021}
   >
     I can't see the wood for the trees anymore
   </Teaser>
   <Teaser
     href="/installations/#pah"
-    imgSrc="/images/expo/P.A.H._ImVorbei_Doku02-web.jpg"
+    imgSrc="expo/P.A.H._ImVorbei_Doku02-web.jpg"
     year={2019}
     rtl
   >
@@ -54,14 +51,14 @@ export const getStaticPaths = () => [
   </Teaser>
   <Teaser
     href="/installations/#theerased"
-    imgSrc="/images/expo/Erasedbrain_02-web.jpg"
+    imgSrc="expo/Erasedbrain_02-web.jpg"
     year={2019}
   >
     The Erased Brain
   </Teaser>
   <Teaser
     href="/installations/#revolvere"
-    imgSrc="/images/expo/revolvere_doku_01-web.jpg"
+    imgSrc="expo/revolvere_doku_01-web.jpg"
     year={2018}
     rtl
   >
@@ -69,14 +66,14 @@ export const getStaticPaths = () => [
   </Teaser>
   <Teaser
     href="/installations/#redgreenbirth"
-    imgSrc="/images/stills/RotGrünGeburt_Filmstill1-web.jpg"
+    imgSrc="stills/RotGrünGeburt_Filmstill1-web.jpg"
     year={2018}
   >
     Red Green Birth
   </Teaser>
   <Teaser
     href="/collaborations/#dondevivoyo"
-    imgSrc="/images/books/DVY_Repro_01.jpg"
+    imgSrc="books/DVY_Repro_01.jpg"
     imgWidth={50}
     year={2017}
     rtl
@@ -85,7 +82,7 @@ export const getStaticPaths = () => [
   </Teaser>
   <Teaser
     href="/films/#ttttouchme"
-    imgSrc="/images/stills/t-t-t-touch-me_filmstill1_low.jpg"
+    imgSrc="stills/t-t-t-touch-me_filmstill1_low.jpg"
     imgWidth={500 / 8}
     year={2017}
   >
@@ -93,7 +90,7 @@ export const getStaticPaths = () => [
   </Teaser>
   <Teaser
     href="/films/#a1224"
-    imgSrc="/images/stills/12-24_01-web_low.jpg"
+    imgSrc="stills/12-24_01-web_low.jpg"
     imgWidth={50}
     year={2017}
     rtl
@@ -102,7 +99,7 @@ export const getStaticPaths = () => [
   </Teaser>
   <Teaser
     href="/films/#venive"
-    imgSrc="/images/stills/VenìVe_Videostill4-web_low.jpg"
+    imgSrc="stills/VenìVe_Videostill4-web_low.jpg"
     imgWidth={50}
     year={2016}
   >
@@ -110,7 +107,7 @@ export const getStaticPaths = () => [
   </Teaser>
   <Teaser
     href="/editorial-design/#thirdgen"
-    imgSrc="/images/books/3rdG_Repro_01.jpg"
+    imgSrc="books/3rdG_Repro_01.jpg"
     year={2014}
     rtl
   >

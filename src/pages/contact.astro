@@ -1,12 +1,9 @@
 ---
-import Layout from "../../components/layout.astro";
+import { getLocale } from "astro-i18n-aut";
 
-const lang = Astro.params.lang;
+import Layout from "@components/layout.astro";
 
-export const getStaticPaths = () => [
-  { params: { lang: "" } },
-  { params: { lang: "de" } },
-];
+const lang = getLocale(Astro.url);
 ---
 
 <Layout

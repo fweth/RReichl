@@ -1,14 +1,12 @@
 ---
-import Layout from "../../components/layout.astro";
-import Link from "../../components/link.astro";
-import Vimeo from "../../components/vimeo.astro";
+import { getLocale } from "astro-i18n-aut";
 
-const lang = Astro.params.lang;
+import Image from "@components/site-image.astro";
+import Layout from "@components/layout.astro";
+import Link from "@components/link.astro";
+import Vimeo from "@components/vimeo.astro";
 
-export const getStaticPaths = () => [
-  { params: { lang: "" } },
-  { params: { lang: "de" } },
-];
+const lang = getLocale(Astro.url);
 ---
 
 <Layout
@@ -88,9 +86,9 @@ export const getStaticPaths = () => [
     </Link>
     <p class="text-red border-beige mt-6 border-b italic">Videostill</p>
     <div class="mt-4 grid grid-cols-2 gap-4">
-      <img
+      <Image
         class="col-span-2"
-        src="/images/collab/Istmo,-a-narrowing-of-land_still1_web.jpg"
+        src="collab/Istmo,-a-narrowing-of-land_still1_web.jpg"
       />
     </div>
   </section>
@@ -125,7 +123,11 @@ export const getStaticPaths = () => [
             Bilder und deren verbundenen Geschichten, wollen wir den Menschen
             die Lebensrealitäten junger Guatemaltek:Innen vor Augen führen.
           </p>
-          <Link class="text-beige mt-4" href="https://amikaro.org/" external={true}>
+          <Link
+            class="text-beige mt-4"
+            href="https://amikaro.org/"
+            external={true}
+          >
             Amikaro
           </Link>
           <p class="text-red border-beige mt-6 border-b italic">Cover</p>
@@ -159,7 +161,11 @@ export const getStaticPaths = () => [
             pictures and their related stories, we want to make people aware of
             the realities of life for young people living in Guatemala.
           </p>
-          <Link class="text-beige mt-4" href="https://amikaro.org/" external={true}>
+          <Link
+            class="text-beige mt-4"
+            href="https://amikaro.org/"
+            external={true}
+          >
             Amikaro
           </Link>
           <p class="text-red border-beige mt-6 border-b italic">Cover</p>
@@ -167,7 +173,7 @@ export const getStaticPaths = () => [
       )
     }
     <div class="mt-4 grid grid-cols-2 gap-4">
-      <img class="col-span-2" src="/images/collab/DVY_Repro_01.jpg" />
+      <Image class="col-span-2" src="collab/DVY_Repro_01.jpg" alt="" />
     </div>
   </section>
   <section class="mt-8 pt-8" id="veroircallar">
@@ -204,7 +210,11 @@ export const getStaticPaths = () => [
             Autoritätsposition einnehmen. Er ist vom Leben gekennzeichnet und
             sichtlich schwer krank.
           </p>
-          <Link class="text-l text-beige mt-4" href="https://amikaro.org/" external={true}>
+          <Link
+            class="text-l text-beige mt-4"
+            href="https://amikaro.org/"
+            external={true}
+          >
             Amikaro
           </Link>
           <p class="text-red border-beige mt-6 border-b italic">
@@ -244,7 +254,11 @@ export const getStaticPaths = () => [
             occupy a special position of authority in marginal neighbourhoods.
             He is marked by life and visibly seriously ill.
           </p>
-          <Link class="text-beige mt-4" href="https://amikaro.org/" external={true}>
+          <Link
+            class="text-beige mt-4"
+            href="https://amikaro.org/"
+            external={true}
+          >
             Amikaro
           </Link>
           <p class="text-red border-beige mt-6 border-b italic">

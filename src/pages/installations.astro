@@ -1,13 +1,11 @@
 ---
-import Layout from "../../components/layout.astro";
-import Vimeo from "../../components/vimeo.astro";
+import Image from "@components/site-image.astro";
+import { getLocale } from "astro-i18n-aut";
 
-const lang = Astro.params.lang;
+import Layout from "@components/layout.astro";
+import Vimeo from "@components/vimeo.astro";
 
-export const getStaticPaths = () => [
-  { params: { lang: "" } },
-  { params: { lang: "de" } },
-];
+const lang = getLocale(Astro.url);
 ---
 
 <Layout
@@ -132,25 +130,22 @@ export const getStaticPaths = () => [
       )
     }
     <div class="mt-4 grid grid-cols-2 gap-4">
-      <img
-        class="col-span-2"
-        src="/images/expo/Cascarones_Reichl_Doku_23-web.jpg"
-      />
-      <img
+      <Image class="col-span-2" src="expo/Cascarones_Reichl_Doku_23-web.jpg" />
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/expo/Cascarones_Reichl_Doku_13-web.jpg"
+        src="expo/Cascarones_Reichl_Doku_13-web.jpg"
       />
-      <img
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/expo/Cascarones_Reichl_Doku_21-web.jpg"
+        src="expo/Cascarones_Reichl_Doku_21-web.jpg"
       />
-      <img
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/expo/Cascarones_Reichl_Doku_33-web.jpg"
+        src="expo/Cascarones_Reichl_Doku_33-web.jpg"
       />
-      <img
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/expo/Cascarones_Reichl_Doku_36-web.jpg"
+        src="expo/Cascarones_Reichl_Doku_36-web.jpg"
       />
     </div>
   </section>
@@ -247,30 +242,18 @@ export const getStaticPaths = () => [
       )
     }
     <div class="mt-4 grid grid-cols-2 gap-4">
-      <img
-        class="col-span-2"
-        src="/images/expo/WaldvorlauterBaume_01-web.jpg"
-      />
-      <img
-        class="col-span-2"
-        src="/images/expo/WaldvorlauterBaume_02-web.jpg"
-      />
-      <img
+      <Image class="col-span-2" src="expo/WaldvorlauterBaume_01-web.jpg" />
+      <Image class="col-span-2" src="expo/WaldvorlauterBaume_02-web.jpg" />
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/expo/WaldvorlauterBaume_03-web.jpg"
+        src="expo/WaldvorlauterBaume_03-web.jpg"
       />
-      <img
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/expo/WaldvorlauterBaume_04-web.jpg"
+        src="expo/WaldvorlauterBaume_04-web.jpg"
       />
-      <img
-        class="col-span-2"
-        src="/images/expo/WaldvorlauterBaume_05-web.jpg"
-      />
-      <img
-        class="col-span-2"
-        src="/images/expo/WaldvorlauterBaume_06-web.jpg"
-      />
+      <Image class="col-span-2" src="expo/WaldvorlauterBaume_05-web.jpg" />
+      <Image class="col-span-2" src="expo/WaldvorlauterBaume_06-web.jpg" />
     </div>
     {
       lang === "de" ? (
@@ -342,14 +325,8 @@ export const getStaticPaths = () => [
       )
     }
     <div class="mt-4 grid grid-cols-2 gap-4">
-      <img
-        class="col-span-2"
-        src="/images/expo/P.A.H._ImVorbei_Doku01-web.jpg"
-      />
-      <img
-        class="col-span-2"
-        src="/images/expo/P.A.H._ImVorbei_Doku02-web.jpg"
-      />
+      <Image class="col-span-2" src="expo/P.A.H._ImVorbei_Doku01-web.jpg" />
+      <Image class="col-span-2" src="expo/P.A.H._ImVorbei_Doku02-web.jpg" />
     </div>
     {
       lang === "de" ? (
@@ -449,14 +426,14 @@ export const getStaticPaths = () => [
       )
     }
     <div class="mt-4 grid grid-cols-2 gap-4">
-      <img class="col-span-2" src="/images/expo/Erasedbrain_03-web.jpg" />
-      <img
+      <Image class="col-span-2" src="expo/Erasedbrain_03-web.jpg" />
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/expo/Erasedbrain_02-web.jpg"
+        src="expo/Erasedbrain_02-web.jpg"
       />
-      <img
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/expo/Erasedbrain_01-web.jpg"
+        src="expo/Erasedbrain_01-web.jpg"
       />
     </div>
     {
@@ -568,14 +545,14 @@ export const getStaticPaths = () => [
       )
     }
     <div class="mt-4 grid grid-cols-2 gap-4">
-      <img class="col-span-2" src="/images/expo/revolvere_doku_01-web.jpg" />
-      <img
+      <Image class="col-span-2" src="expo/revolvere_doku_01-web.jpg" />
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/expo/revolvere_doku_02-web.jpg"
+        src="expo/revolvere_doku_02-web.jpg"
       />
-      <img
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/expo/revolvere_doku_03-web.jpg"
+        src="expo/revolvere_doku_03-web.jpg"
       />
     </div>
     {
@@ -626,22 +603,22 @@ export const getStaticPaths = () => [
       )
     }
     <div class="mt-4 grid grid-cols-2 gap-4">
-      <img class="col-span-2" src="/images/expo/RGG_Raumansicht_01-web.jpg" />
-      <img
+      <Image class="col-span-2" src="expo/RGG_Raumansicht_01-web.jpg" />
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/stills/RotGrünGeburt_Filmstill1-web.jpg"
+        src="stills/RotGrünGeburt_Filmstill1-web.jpg"
       />
-      <img
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/stills/RotGrünGeburt_Filmstill7-web.jpg"
+        src="stills/RotGrünGeburt_Filmstill7-web.jpg"
       />
-      <img
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/stills/RotGrünGeburt_Filmstill3-web.jpg"
+        src="stills/RotGrünGeburt_Filmstill3-web.jpg"
       />
-      <img
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/stills/RotGrünGeburt_Filmstill4-web.jpg"
+        src="stills/RotGrünGeburt_Filmstill4-web.jpg"
       />
     </div>
     <Vimeo id="312721810" />
@@ -712,7 +689,7 @@ export const getStaticPaths = () => [
       )
     }
     <div class="mt-4 grid grid-cols-2 gap-4">
-      <img class="col-span-2" src="/images/expo/NotProjektion-web.jpg" />
+      <Image class="col-span-2" src="expo/NotProjektion-web.jpg" />
     </div>
   </section>
 </Layout>

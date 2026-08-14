@@ -1,13 +1,11 @@
 ---
-import Layout from "../../components/layout.astro";
-import Link from "../../components/link.astro";
+import Image from "@components/site-image.astro";
+import { getLocale } from "astro-i18n-aut";
 
-const lang = Astro.params.lang;
+import Layout from "@components/layout.astro";
+import Link from "@components/link.astro";
 
-export const getStaticPaths = () => [
-  { params: { lang: "" } },
-  { params: { lang: "de" } },
-];
+const lang = getLocale(Astro.url);
 ---
 
 <Layout
@@ -113,9 +111,9 @@ export const getStaticPaths = () => [
     }
   </section>
   <div class="mt-4 grid grid-cols-2 gap-4">
-    <img class="col-span-2" src="/images/books/FDGDA-Booklets_01-lowres.jpg" />
-    <img class="col-span-2" src="/images/books/FDGDA-Booklets_05-lowres.jpg" />
-    <img class="col-span-2" src="/images/books/FDGDA-Booklets_02-lowres.jpg" />
+    <Image class="col-span-2" src="books/FDGDA-Booklets_01-lowres.jpg" />
+    <Image class="col-span-2" src="books/FDGDA-Booklets_05-lowres.jpg" />
+    <Image class="col-span-2" src="books/FDGDA-Booklets_02-lowres.jpg" />
   </div>
   <section class="mt-8 pt-8" id="cocina">
     {
@@ -192,25 +190,25 @@ export const getStaticPaths = () => [
     }
   </section>
   <div class="mt-4 grid grid-cols-2 gap-4">
-    <img class="col-span-2" src="/images/books/CG_Book-Docu_01-lowres.jpg" />
-    <img
+    <Image class="col-span-2" src="books/CG_Book-Docu_01-lowres.jpg" />
+    <Image
       class="col-span-2 md:col-span-1"
-      src="/images/books/CG_Book-Docu_02-lowres.jpg"
+      src="books/CG_Book-Docu_02-lowres.jpg"
     />
-    <img
+    <Image
       class="col-span-2 md:col-span-1"
-      src="/images/books/CG_Book-Docu_03-lowres.jpg"
+      src="books/CG_Book-Docu_03-lowres.jpg"
     />
-    <img class="col-span-2" src="/images/books/CG_Book-Docu_05-lowres.jpg" />
-    <img
+    <Image class="col-span-2" src="books/CG_Book-Docu_05-lowres.jpg" />
+    <Image
       class="col-span-2 md:col-span-1"
-      src="/images/books/CG_Book-Docu_09-lowres.jpg"
+      src="books/CG_Book-Docu_09-lowres.jpg"
     />
-    <img
+    <Image
       class="col-span-2 md:col-span-1"
-      src="/images/books/CG_Book-Docu_10-lowres.jpg"
+      src="books/CG_Book-Docu_10-lowres.jpg"
     />
-    <img class="col-span-2" src="/images/books/CG_Book-Docu_07-lowres.jpg" />
+    <Image class="col-span-2" src="books/CG_Book-Docu_07-lowres.jpg" />
   </div>
   <section class="mt-8 pt-8" id="almendrado">
     {
@@ -280,29 +278,23 @@ export const getStaticPaths = () => [
     }
   </section>
   <div class="mt-4 grid grid-cols-2 gap-4">
-    <img
-      class="col-span-2"
-      src="/images/books/Almendrado_Book-Docu_01-lowres.jpg"
-    />
-    <img
-      class="col-span-2"
-      src="/images/books/Almendrado_Book-Docu_03-lowres.jpg"
-    />
-    <img
+    <Image class="col-span-2" src="books/Almendrado_Book-Docu_01-lowres.jpg" />
+    <Image class="col-span-2" src="books/Almendrado_Book-Docu_03-lowres.jpg" />
+    <Image
       class="col-span-2 md:col-span-1"
-      src="/images/books/Almendrado_Book-Docu_02-lowres.jpg"
+      src="books/Almendrado_Book-Docu_02-lowres.jpg"
     />
-    <img
+    <Image
       class="col-span-2 md:col-span-1"
-      src="/images/books/Almendrado_Book-Docu_05-lowres.jpg"
+      src="books/Almendrado_Book-Docu_05-lowres.jpg"
     />
-    <img
+    <Image
       class="col-span-2 md:col-span-1"
-      src="/images/books/Almendrado_Book-Docu_06-lowres.jpg"
+      src="books/Almendrado_Book-Docu_06-lowres.jpg"
     />
-    <img
+    <Image
       class="col-span-2 md:col-span-1"
-      src="/images/books/Almendrado_Book-Docu_04-lowres.jpg"
+      src="books/Almendrado_Book-Docu_04-lowres.jpg"
     />
   </div>
   <section class="mt-8 pt-8" id="andar">
@@ -365,29 +357,23 @@ export const getStaticPaths = () => [
       )
     }
     <div class="mt-4 grid grid-cols-2 gap-4">
-      <img
-        class="col-span-2"
-        src="/images/expo/Cascarones_Reichl_Doku_33-web.jpg"
-      />
-      <img
+      <Image class="col-span-2" src="expo/Cascarones_Reichl_Doku_33-web.jpg" />
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/books/Cascarones-Essay_01-lowres.jpg"
+        src="books/Cascarones-Essay_01-lowres.jpg"
       />
-      <img
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/books/Cascarones-Essay_02-lowres.jpg"
+        src="books/Cascarones-Essay_02-lowres.jpg"
       />
-      <img
-        class="col-span-2"
-        src="/images/books/Cascarones-Essay_04-lowres.jpg"
-      />
-      <img
+      <Image class="col-span-2" src="books/Cascarones-Essay_04-lowres.jpg" />
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/books/Cascarones-Essay_05-lowres.jpg"
+        src="books/Cascarones-Essay_05-lowres.jpg"
       />
-      <img
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/books/Cascarones-Essay_03-lowres.jpg"
+        src="books/Cascarones-Essay_03-lowres.jpg"
       />
     </div>
   </section>
@@ -487,32 +473,14 @@ export const getStaticPaths = () => [
       )
     }
     <div class="mt-4 grid grid-cols-2 gap-4">
-      <img class="col-span-2" src="/images/books/TaT_Repro_01.jpg" />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/TaT_Repro_02.jpg"
-      />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/TaT_Repro_03.jpg"
-      />
-      <img class="col-span-2" src="/images/books/TaT_Repro_04.jpg" />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/TaT_Repro_06.jpg"
-      />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/TaT_Repro_07.jpg"
-      />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/TaT_Repro_08.jpg"
-      />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/TaT_Repro_09.jpg"
-      />
+      <Image class="col-span-2" src="books/TaT_Repro_01.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/TaT_Repro_02.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/TaT_Repro_03.jpg" />
+      <Image class="col-span-2" src="books/TaT_Repro_04.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/TaT_Repro_06.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/TaT_Repro_07.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/TaT_Repro_08.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/TaT_Repro_09.jpg" />
     </div>
   </section>
   <section class="mt-8 pt-8" id="iwanttodisappear">
@@ -541,41 +509,27 @@ export const getStaticPaths = () => [
       living in industrialized countries are at highest risk to be affected.
     </p>
     <p class="w-5/8">Text by Mafalda Rakoš</p>
-    <Link class="text-beige mt-4" href="https://mafaldarakos.com/" external={true}>
+    <Link
+      class="text-beige mt-4"
+      href="https://mafaldarakos.com/"
+      external={true}
+    >
       Mafalda Rakoš
     </Link>
     <p class="text-red border-beige mt-4 border-b italic">
       Fotos by Digitale Fotowerkstatt, University of Applied Arts Vienna
     </p>
     <div class="mt-4 grid grid-cols-2 gap-4">
-      <img class="col-span-2" src="/images/books/Idwd_Repro_01.jpg" />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/Idwd_Repro_02.jpg"
-      />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/Idwd_Repro_03.jpg"
-      />
-      <img class="col-span-2" src="/images/books/Idwd_Repro_04.jpg" />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/Idwd_Repro_05.jpg"
-      />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/Idwd_Repro_06.jpg"
-      />
-      <img class="col-span-2" src="/images/books/Idwd_Repro_07.jpg" />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/Idwd_Repro_08.jpg"
-      />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/Idwd_Repro_09.jpg"
-      />
-      <img class="col-span-2" src="/images/books/Idwd_Repro_10.jpg" />
+      <Image class="col-span-2" src="books/Idwd_Repro_01.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/Idwd_Repro_02.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/Idwd_Repro_03.jpg" />
+      <Image class="col-span-2" src="books/Idwd_Repro_04.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/Idwd_Repro_05.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/Idwd_Repro_06.jpg" />
+      <Image class="col-span-2" src="books/Idwd_Repro_07.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/Idwd_Repro_08.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/Idwd_Repro_09.jpg" />
+      <Image class="col-span-2" src="books/Idwd_Repro_10.jpg" />
     </div>
   </section>
   <section class="mt-8 pt-8" id="dondevivoyo">
@@ -608,7 +562,11 @@ export const getStaticPaths = () => [
             deren verbundenen Geschichten, wollen wir den Menschen die
             Lebensrealitäten junger Guatemaltek:Innen vor Augen führen.
           </p>
-          <Link class="text-beige mt-4" href="https://amikaro.org/" external={true}>
+          <Link
+            class="text-beige mt-4"
+            href="https://amikaro.org/"
+            external={true}
+          >
             Amikaro
           </Link>
           <p class="text-red border-beige mt-4 border-b italic">
@@ -644,7 +602,11 @@ export const getStaticPaths = () => [
             want to make people aware of the realities of life for young people
             living in Guatemala.
           </p>
-          <Link class="text-beige mt-4" href="https://amikaro.org/" external={true}>
+          <Link
+            class="text-beige mt-4"
+            href="https://amikaro.org/"
+            external={true}
+          >
             Amikaro
           </Link>
           <p class="text-red border-beige mt-4 border-b italic">
@@ -655,24 +617,12 @@ export const getStaticPaths = () => [
     }
   </section>
   <div class="mt-4 grid grid-cols-2 gap-4">
-    <img class="col-span-2" src="/images/books/DVY_Repro_01.jpg" />
-    <img class="col-span-2" src="/images/books/DVY_Repro_02.jpg" />
-    <img
-      class="col-span-2 md:col-span-1"
-      src="/images/books/DVY_Repro_03.jpg"
-    />
-    <img
-      class="col-span-2 md:col-span-1"
-      src="/images/books/DVY_Repro_04.jpg"
-    />
-    <img
-      class="col-span-2 md:col-span-1"
-      src="/images/books/DVY_Repro_05.jpg"
-    />
-    <img
-      class="col-span-2 md:col-span-1"
-      src="/images/books/DVY_Repro_06.jpg"
-    />
+    <Image class="col-span-2" src="books/DVY_Repro_01.jpg" />
+    <Image class="col-span-2" src="books/DVY_Repro_02.jpg" />
+    <Image class="col-span-2 md:col-span-1" src="books/DVY_Repro_03.jpg" />
+    <Image class="col-span-2 md:col-span-1" src="books/DVY_Repro_04.jpg" />
+    <Image class="col-span-2 md:col-span-1" src="books/DVY_Repro_05.jpg" />
+    <Image class="col-span-2 md:col-span-1" src="books/DVY_Repro_06.jpg" />
   </div>
   <section class="mt-8 pt-8" id="verruecktegeometrie">
     {
@@ -764,15 +714,15 @@ export const getStaticPaths = () => [
     }
   </section>
   <div class="mt-4 grid grid-cols-2 gap-4">
-    <img class="col-span-2" src="/images/books/VG_Repro_01.jpg" />
-    <img class="col-span-2 md:col-span-1" src="/images/books/VG_Repro_02.jpg" />
-    <img class="col-span-2 md:col-span-1" src="/images/books/VG_Repro_03.jpg" />
-    <img class="col-span-2 md:col-span-1" src="/images/books/VG_Repro_04.jpg" />
-    <img class="col-span-2 md:col-span-1" src="/images/books/VG_Repro_05.jpg" />
-    <img class="col-span-2" src="/images/books/VG_Repro_07.jpg" />
-    <img class="col-span-2 md:col-span-1" src="/images/books/VG_Repro_08.jpg" />
-    <img class="col-span-2 md:col-span-1" src="/images/books/VG_Repro_09.jpg" />
-    <img class="col-span-2" src="/images/books/VG_Repro_10.jpg" />
+    <Image class="col-span-2" src="books/VG_Repro_01.jpg" />
+    <Image class="col-span-2 md:col-span-1" src="books/VG_Repro_02.jpg" />
+    <Image class="col-span-2 md:col-span-1" src="books/VG_Repro_03.jpg" />
+    <Image class="col-span-2 md:col-span-1" src="books/VG_Repro_04.jpg" />
+    <Image class="col-span-2 md:col-span-1" src="books/VG_Repro_05.jpg" />
+    <Image class="col-span-2" src="books/VG_Repro_07.jpg" />
+    <Image class="col-span-2 md:col-span-1" src="books/VG_Repro_08.jpg" />
+    <Image class="col-span-2 md:col-span-1" src="books/VG_Repro_09.jpg" />
+    <Image class="col-span-2" src="books/VG_Repro_10.jpg" />
   </div>
   <section class="mt-8 pt-8" id="ziegelsteine">
     {
@@ -833,25 +783,13 @@ export const getStaticPaths = () => [
       )
     }
     <div class="mt-4 grid grid-cols-2 gap-4">
-      <img class="col-span-2" src="/images/books/ZaS_Repro_01.jpg" />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/ZaS_Repro_03.jpg"
-      />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/ZaS_Repro_04.jpg"
-      />
-      <img class="col-span-2" src="/images/books/ZaS_Repro_05.jpg" />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/ZaS_Repro_06.jpg"
-      />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/ZaS_Repro_07.jpg"
-      />
-      <img class="col-span-2" src="/images/books/ZaS_Repro_08.jpg" />
+      <Image class="col-span-2" src="books/ZaS_Repro_01.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/ZaS_Repro_03.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/ZaS_Repro_04.jpg" />
+      <Image class="col-span-2" src="books/ZaS_Repro_05.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/ZaS_Repro_06.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/ZaS_Repro_07.jpg" />
+      <Image class="col-span-2" src="books/ZaS_Repro_08.jpg" />
     </div>
   </section>
   <section class="mt-8 pt-8" id="thirdgen">
@@ -940,33 +878,15 @@ export const getStaticPaths = () => [
       )
     }
     <div class="mt-4 grid grid-cols-2 gap-4">
-      <img class="col-span-2" src="/images/books/3rdG_Repro_01.jpg" />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/3rdG_Repro_02.jpg"
-      />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/3rdG_Repro_03.jpg"
-      />
-      <img class="col-span-2" src="/images/books/3rdG_Repro_04.jpg" />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/3rdG_Repro_05.jpg"
-      />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/3rdG_Repro_06.jpg"
-      />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/3rdG_Repro_07.jpg"
-      />
-      <img
-        class="col-span-2 md:col-span-1"
-        src="/images/books/3rdG_Repro_08.jpg"
-      />
-      <img class="col-span-2" src="/images/books/3rdG_Repro_09.jpg" />
+      <Image class="col-span-2" src="books/3rdG_Repro_01.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/3rdG_Repro_02.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/3rdG_Repro_03.jpg" />
+      <Image class="col-span-2" src="books/3rdG_Repro_04.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/3rdG_Repro_05.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/3rdG_Repro_06.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/3rdG_Repro_07.jpg" />
+      <Image class="col-span-2 md:col-span-1" src="books/3rdG_Repro_08.jpg" />
+      <Image class="col-span-2" src="books/3rdG_Repro_09.jpg" />
     </div>
   </section>
 </Layout>

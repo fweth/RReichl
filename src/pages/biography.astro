@@ -1,12 +1,9 @@
 ---
-import Layout from "../../components/layout.astro";
+import Image from "@components/site-image.astro";
+import { getLocale } from "astro-i18n-aut";
+import Layout from "@components/layout.astro";
 
-const lang = Astro.params.lang;
-
-export const getStaticPaths = () => [
-  { params: { lang: "" } },
-  { params: { lang: "de" } },
-];
+const lang = getLocale(Astro.url);
 ---
 
 <Layout
@@ -15,9 +12,9 @@ export const getStaticPaths = () => [
   lang={lang}
 >
   <div class="mt-4 grid grid-cols-3 gap-4">
-    <img
+    <Image
       class="col-span-2 md:col-span-1"
-      src="/images/generell/Reichl_Portrait_web.jpg"
+      src="generell/Reichl_Portrait_web.jpg"
     />
   </div>
   <p class="text-red mt-16 text-xl font-bold">Raphael Reichl</p>

@@ -1,12 +1,12 @@
 ---
+import { getUrlWithoutLocale } from "astro-i18n-aut";
+
 import LangSwitcher from "./lang-switcher.astro";
 import Link from "./link.astro";
-const { sectionNames = [], lang, paths } = Astro.props;
-const path = Astro.url.pathname
-  .replace(/^\/de/, "")
-  .replaceAll("/", "")
-  .replaceAll("-", " ");
-const location = path.length ? path : "index";
+const { sectionNames = [], lang } = Astro.props;
+const location =
+  getUrlWithoutLocale(Astro.url).replaceAll("/", "").replaceAll("-", " ") ||
+  "index";
 ---
 
 <script>
@@ -61,8 +61,10 @@ const location = path.length ? path : "index";
 <header
   class="fixed top-0 z-10 w-screen translate-y-[calc(128px-100%)] bg-white pt-4 transition-transform lg:w-96 lg:translate-y-0 lg:bg-transparent"
 >
-  <div class="font-ocr-t text-red absolute right-5 bottom-7 z-10 text-right text-xl lg:hidden">
-    <LangSwitcher lang={lang} paths={paths} />
+  <div
+    class="font-ocr-t text-red absolute right-5 bottom-7 z-10 text-right text-xl lg:hidden"
+  >
+    <LangSwitcher lang={lang} />
   </div>
   <div class="top-4 left-4 grid w-80 grid-cols-2">
     <Link class="text-red col-start-2 block text-xl" href="/"

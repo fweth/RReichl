@@ -1,13 +1,11 @@
 ---
-import Layout from "../../components/layout.astro";
-import Vimeo from "../../components/vimeo.astro";
+import Image from "@components/site-image.astro";
+import { getLocale } from "astro-i18n-aut";
 
-const lang = Astro.params.lang;
+import Layout from "@components/layout.astro";
+import Vimeo from "@components/vimeo.astro";
 
-export const getStaticPaths = () => [
-  { params: { lang: "" } },
-  { params: { lang: "de" } },
-];
+const lang = getLocale(Astro.url);
 ---
 
 <Layout
@@ -36,10 +34,7 @@ export const getStaticPaths = () => [
             2024, Österreich / Mexiko
           </p>
           <div class="mt-8 grid grid-cols-2 gap-4">
-            <img
-              class="col-span-2"
-              src="/images/stills/ParadiseInside_Still_1.jpg"
-            />
+            <Image class="col-span-2" src="stills/ParadiseInside_Still_1.jpg" />
           </div>
           <p class="relative h-0 overflow-hidden pb-[75%]" />
           <p class="text-red mt-6 italic">Regie, Drehbuch und Produktion</p>
@@ -77,10 +72,7 @@ export const getStaticPaths = () => [
             2024, Austria / Mexico
           </p>
           <div class="mt-8 grid grid-cols-2 gap-4">
-            <img
-              class="col-span-2"
-              src="/images/stills/ParadiseInside_Still_1.jpg"
-            />
+            <Image class="col-span-2" src="stills/ParadiseInside_Still_1.jpg" />
           </div>
           <p class="text-red mt-6 italic">Written, directed and produced by</p>
           <p class="text-l text-red">Raphael Reichl</p>
@@ -109,21 +101,21 @@ export const getStaticPaths = () => [
       )
     }
     <div class="mt-8 grid grid-cols-2 gap-4">
-      <img
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/stills/ParadiseInside_Still_3.jpg"
+        src="stills/ParadiseInside_Still_3.jpg"
       />
-      <img
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/stills/ParadiseInside_Still_2.jpg"
+        src="stills/ParadiseInside_Still_2.jpg"
       />
-      <img
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/stills/ParadiseInside_Still_4.jpg"
+        src="stills/ParadiseInside_Still_4.jpg"
       />
-      <img
+      <Image
         class="col-span-2 md:col-span-1"
-        src="/images/stills/ParadiseInside_Still_5.jpg"
+        src="stills/ParadiseInside_Still_5.jpg"
       />
     </div>
     <div style="padding:72.27% 0 0 0;position:relative;">
@@ -174,10 +166,7 @@ export const getStaticPaths = () => [
           </p>
         </div>
         <div class="mt-8 grid grid-cols-2 gap-4">
-          <img
-            class="col-span-2"
-            src="/images/stills/LaEscondida_Still_09.jpg"
-          />
+          <Image class="col-span-2" src="stills/LaEscondida_Still_09.jpg" />
         </div>
         <div class="grid">
           <div
@@ -274,25 +263,22 @@ export const getStaticPaths = () => [
           </div>
         </div>
         <div class="mt-8 grid grid-cols-2 gap-4">
-          <img
-            class="col-span-2"
-            src="/images/stills/LaEscondida_Still_05.jpg"
-          />
-          <img
+          <Image class="col-span-2" src="stills/LaEscondida_Still_05.jpg" />
+          <Image
             class="col-span-2 md:col-span-1"
-            src="/images/stills/LaEscondida_Still_02.jpg"
+            src="stills/LaEscondida_Still_02.jpg"
           />
-          <img
+          <Image
             class="col-span-2 md:col-span-1"
-            src="/images/stills/LaEscondida_Still_04.jpg"
+            src="stills/LaEscondida_Still_04.jpg"
           />
-          <img
+          <Image
             class="col-span-2 md:col-span-1"
-            src="/images/stills/LaEscondida_Still_07.jpg"
+            src="stills/LaEscondida_Still_07.jpg"
           />
-          <img
+          <Image
             class="col-span-2 md:col-span-1"
-            src="/images/stills/LaEscondida_Still_06.jpg"
+            src="stills/LaEscondida_Still_06.jpg"
           />
         </div>
       </div>
@@ -410,17 +396,14 @@ export const getStaticPaths = () => [
       }
       <p class="text-red border-beige mt-4 border-b italic">Videostills</p>
       <div class="mt-4 grid grid-cols-2 gap-4">
-        <img
-          class="col-span-2"
-          src="/images/stills/Ahuehuete_Still01-web_low.jpg"
-        />
-        <img
+        <Image class="col-span-2" src="stills/Ahuehuete_Still01-web_low.jpg" />
+        <Image
           class="col-span-2 md:col-span-1"
-          src="/images/stills/Ahuehuete_Still02-web_low.jpg"
+          src="stills/Ahuehuete_Still02-web_low.jpg"
         />
-        <img
+        <Image
           class="col-span-2 md:col-span-1"
-          src="/images/stills/Ahuehuete_Still03-web_low.jpg"
+          src="stills/Ahuehuete_Still03-web_low.jpg"
         />
       </div>
       {
@@ -441,13 +424,13 @@ export const getStaticPaths = () => [
         )
       }
       <div class="mt-4 grid grid-cols-2 gap-4">
-        <img
+        <Image
           class="col-span-2 md:col-span-1"
-          src="/images/expo/Auhuehuete_FotoWien22_Doku_01.jpg"
+          src="expo/Auhuehuete_FotoWien22_Doku_01.jpg"
         />
-        <img
+        <Image
           class="col-span-2 md:col-span-1"
-          src="/images/expo/Auhuehuete_FotoWien22_Doku_36.jpg"
+          src="expo/Auhuehuete_FotoWien22_Doku_36.jpg"
         />
       </div>
       {
@@ -576,17 +559,17 @@ export const getStaticPaths = () => [
         )
       }
       <div class="mt-4 grid grid-cols-2 gap-4">
-        <img
+        <Image
           class="col-span-2"
-          src="/images/stills/t-t-t-touch-me_filmstill1_low.jpg"
+          src="stills/t-t-t-touch-me_filmstill1_low.jpg"
         />
-        <img
+        <Image
           class="col-span-2 md:col-span-1"
-          src="/images/stills/t-t-t-touch-me_filmstill2_low.jpg"
+          src="stills/t-t-t-touch-me_filmstill2_low.jpg"
         />
-        <img
+        <Image
           class="col-span-2 md:col-span-1"
-          src="/images/stills/t-t-t-touch-me_filmstill3_low.jpg"
+          src="stills/t-t-t-touch-me_filmstill3_low.jpg"
         />
       </div>
       <Vimeo id="232663113" />
@@ -606,13 +589,13 @@ export const getStaticPaths = () => [
         )
       }
       <div class="mt-4 grid grid-cols-2 gap-4">
-        <img
+        <Image
           class="col-span-2 md:col-span-1"
-          src="/images/expo/ttttouchme_Fotogalerie_01-web.jpg"
+          src="expo/ttttouchme_Fotogalerie_01-web.jpg"
         />
-        <img
+        <Image
           class="col-span-2 md:col-span-1"
-          src="/images/expo/ttttouchme_Fotogalerie_02-web.jpg"
+          src="expo/ttttouchme_Fotogalerie_02-web.jpg"
         />
       </div>
       {
@@ -677,13 +660,13 @@ export const getStaticPaths = () => [
       }
       <p class="text-red border-beige mt-6 border-b italic">Filmstills</p>
       <div class="mt-4 grid grid-cols-2 gap-4">
-        <img
+        <Image
           class="col-span-2 md:col-span-1"
-          src="/images/stills/12-24_01-web_low.jpg"
+          src="stills/12-24_01-web_low.jpg"
         />
-        <img
+        <Image
           class="col-span-2 md:col-span-1"
-          src="/images/stills/12-24_02-web_low.jpg"
+          src="stills/12-24_02-web_low.jpg"
         />
       </div>
       <Vimeo id="245454004" />
@@ -755,25 +738,22 @@ export const getStaticPaths = () => [
       }
       <p class="text-red border-beige mt-6 border-b italic">Videostills</p>
       <div class="mt-4 grid grid-cols-2 gap-4">
-        <img
-          class="col-span-2"
-          src="/images/stills/VenìVe_Videostill1-web_low.jpg"
-        />
-        <img
+        <Image class="col-span-2" src="stills/VenìVe_Videostill1-web_low.jpg" />
+        <Image
           class="col-span-2 md:col-span-1"
-          src="/images/stills/VenìVe_Videostill3-web_low.jpg"
+          src="stills/VenìVe_Videostill3-web_low.jpg"
         />
-        <img
+        <Image
           class="col-span-2 md:col-span-1"
-          src="/images/stills/VenìVe_Videostill4-web_low.jpg"
+          src="stills/VenìVe_Videostill4-web_low.jpg"
         />
-        <img
+        <Image
           class="col-span-2 md:col-span-1"
-          src="/images/stills/VenìVe_Videostill6-web_low.jpg"
+          src="stills/VenìVe_Videostill6-web_low.jpg"
         />
-        <img
+        <Image
           class="col-span-2 md:col-span-1"
-          src="/images/stills/VenìVe_Videostill5-web_low.jpg"
+          src="stills/VenìVe_Videostill5-web_low.jpg"
         />
       </div>
     </section>

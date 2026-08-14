@@ -1,15 +1,18 @@
 ---
-const { lang, paths } = Astro.props;
+import { getAllLocaleUrls } from "astro-i18n-aut";
+
+const { lang } = Astro.props;
+const paths = getAllLocaleUrls(Astro.url);
 ---
 
 <div>
   <a
-    class={lang ? "" : "pointer-events-none cursor-default underline"}
+    class={lang === "en" ? "pointer-events-none cursor-default underline" : ""}
     href={paths.en}>en</a
   >
   &nbsp;&nbsp;/&nbsp;&nbsp;
   <a
-    class={lang ? "pointer-events-none cursor-default underline" : ""}
+    class={lang === "de" ? "pointer-events-none cursor-default underline" : ""}
     href={paths.de}>de</a
   >
 </div>

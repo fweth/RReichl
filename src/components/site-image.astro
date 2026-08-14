@@ -1,0 +1,30 @@
+---
+// @ts-nocheck
+import { Image } from "astro:assets";
+
+const { src, alt = "", class: className, style, ...props } = Astro.props;
+const images = import.meta.glob("/src/images/**/*");
+const loadImage = images[`/src/images/${src}`];
+
+if (!loadImage) {
+  throw new Error(`Unknown image: ${src}`);
+}
+
+const image = (await loadImage()).default;
+---
+
+<div
+  class={className}
+  style={{
+    background: "#eeeeee",
+    ...style,
+  }}
+>
+  <Image
+    class="opacity-0 transition-opacity duration-500"
+    src={image}
+    alt={alt}
+    onload="this.style.opacity = 1"
+    {...props}
+  />
+</div>
