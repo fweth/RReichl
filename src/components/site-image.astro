@@ -18,6 +18,15 @@ if (!loadImage) {
 }
 
 const image = (await loadImage()).default;
+const imgProps = {
+  class: "opacity-0 transition-opacity duration-500",
+  src: image,
+  alt,
+  width: 1024,
+  layout: "constrained",
+  onload: "this.style.opacity = 1",
+  ...props,
+}
 ---
 
 {
@@ -29,13 +38,7 @@ const image = (await loadImage()).default;
       data-fancybox={fancybox}
     >
       <Image
-        class="opacity-0 transition-opacity duration-500"
-        src={image}
-        alt={alt}
-        width={1024}
-        layout="constrained"
-        onload="this.style.opacity = 1"
-        {...props}
+        {...imgProps}
       />
     </a>
   ) : (
@@ -44,13 +47,7 @@ const image = (await loadImage()).default;
       style={{ background: "#eeeeee", ...style }}
     >
       <Image
-        class="opacity-0 transition-opacity duration-500"
-        src={image}
-        alt={alt}
-        width={1024}
-        layout="constrained"
-        onload="this.style.opacity = 1"
-        {...props}
+        {...imgProps}
       />
     </div>
   )
