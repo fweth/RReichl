@@ -1,6 +1,9 @@
 ---
 import Header from "./header.astro";
 import LangSwitcher from "./lang-switcher.astro";
+import "@fancyapps/ui/dist/carousel/carousel.css";
+import "@fancyapps/ui/dist/carousel/carousel.arrows.css";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import "../styles/global.css";
 const {
   title = "Raphael Reichl",
@@ -40,5 +43,30 @@ const {
         © 2026 Raphael Reichl / media artist and independent filmmaker
       </p>
     </footer>
+    <script>
+      // @ts-nocheck
+      import { Carousel } from "@fancyapps/ui/dist/carousel/";
+      import { Arrows } from "@fancyapps/ui/dist/carousel/carousel.arrows.js";
+      import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
+
+      Fancybox.bind("[data-fancybox]", {
+        Carousel: {
+          Thumbs: false,
+          Toolbar: {
+            display: {
+              left: ["counter"],
+              middle: [],
+              right: ["close"],
+            },
+          },
+        },
+        hideScrollbar: false,
+      });
+
+      const carousels = document.querySelectorAll("[data-carousel]");
+      for (const el of carousels) {
+        Carousel(el, { transition: "slide" }, { Arrows }).init();
+      }
+    </script>
   </body>
 </html>

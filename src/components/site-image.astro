@@ -2,7 +2,14 @@
 // @ts-nocheck
 import { Image } from "astro:assets";
 
-const { src, alt = "", class: className, style, ...props } = Astro.props;
+const {
+  src,
+  alt = "",
+  class: className,
+  style,
+  fancybox,
+  ...props
+} = Astro.props;
 const images = import.meta.glob("/src/images/**/*");
 const loadImage = images[`/src/images/${src}`];
 
@@ -13,20 +20,38 @@ if (!loadImage) {
 const image = (await loadImage()).default;
 ---
 
-<div
-  class={className}
-  style={{
-    background: "#eeeeee",
-    ...style,
-  }}
->
-  <Image
-    class="opacity-0 transition-opacity duration-500"
-    src={image}
-    alt={alt}
-    width={1024}
-    layout="constrained"
-    onload="this.style.opacity = 1"
-    {...props}
-  />
-</div>
+{
+  fancybox ? (
+    <a
+      class={className}
+      style={{ background: "#eeeeee", ...style }}
+      href={image.src}
+      data-fancybox={fancybox}
+    >
+      <Image
+        class="opacity-0 transition-opacity duration-500"
+        src={image}
+        alt={alt}
+        width={1024}
+        layout="constrained"
+        onload="this.style.opacity = 1"
+        {...props}
+      />
+    </a>
+  ) : (
+    <div
+      class={className}
+      style={{ background: "#eeeeee", ...style }}
+    >
+      <Image
+        class="opacity-0 transition-opacity duration-500"
+        src={image}
+        alt={alt}
+        width={1024}
+        layout="constrained"
+        onload="this.style.opacity = 1"
+        {...props}
+      />
+    </div>
+  )
+}
